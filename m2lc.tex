@@ -1,0 +1,169 @@
+% +++
+% latex="texfot lualatex-dev"
+% +++
+\documentclass[aspectratio=149,9pt,fleqn]{beamer}
+\usetheme[numbering=fraction,block=fill]{metropolis}
+\usefonttheme{professionalfonts}
+
+\usepackage{luatexja,luatexja-adjust}
+\usepackage[no-math,match,deluxe]{luatexja-fontspec}
+
+\hypersetup{unicode,colorlinks}
+\hypersetup{linkcolor=blue,urlcolor=teal,citecolor=olive}
+% \hypersetup{linkcolor=black,urlcolor=black,citecolor=black}
+
+\usepackage{pxrubrica}
+\usepackage{autobreak}
+\usepackage{tikz,pgfplots,tcolorbox}
+\usetikzlibrary{calc}
+\pgfplotsset{compat=1.16}
+
+\usepackage[version=4,arrows=pgf]{mhchem}
+\mhchemoptions{textfontcommand=\sffamily,mathfontcommand=\mathsf}
+\newcommand*\cec[1]{\cesplit{{\,\ }{\0}}{#1}}
+
+\usepackage{tabularray}
+\SetTblrDefault{rowsep=0pt}
+
+\usepackage[loadonly,]{enumitem}
+\newlist{desc}{description}{5}
+\setlist[desc]{labelindent=2\zw,labelsep*=1\zw,labelwidth=3\zw}
+\newlist{enu}{enumerate}{5}
+\setlist[enu]{label*=\arabic*.}
+
+\ltjsetparameter{jacharrange={-2,-3,-8}}
+\usepackage[no-math,match,deluxe,fontspec]{luatexja-preset}
+
+% \usepackage[osf]{newpxtext}\usepackage{classico}
+\usepackage[nowidering]{yhmath}
+\usepackage{newpxmath,amsmath,mathtools,amssymb,mleftright}
+\usepackage[T1]{fontenc}
+\usepackage[notrig,italicdiff]{physics}
+\mleftright
+
+\usepackage[scr=boondoxo,frak=pxtx,bb=mth]{mathalfa}
+\DeclareMathAlphabet{\mathnormal}{T1}{pplx}{m}{it}
+\DeclareMathAlphabet{\mathrm}{T1}{pplx}{m}{n}
+\DeclareMathAlphabet{\mathit}{T1}{pplx}{m}{it}
+\DeclareMathAlphabet{\mathtt}{T1}{lmtt}{m}{n}
+\DeclareMathAlphabet{\mathsf}{T1}{kurier}{m}{n}
+\DeclareMathAlphabet{\mathbsf}{T1}{kurier}{b}{n}
+\DeclareMathAlphabet{\mathbold}{T1}{pplx}{b}{it}
+\DeclareMathAlphabet{\mathbf}{T1}{pplx}{b}{n}
+\DeclareMathAlphabet{\mathscr}{U}{BOONDOX-calo}{m}{n}
+\DeclareMathAlphabet{\mathbscr}{U}{BOONDOX-calo}{b}{n}
+%\DeclareMathAlphabet{\mathcal}{OT1}{eusm10}{m}{n}
+%\DeclareMathAlphabet{\mathbcal}{OT1}{eusm10}{b}{n}
+\DeclareMathAlphabet{\mathfrak}{OT1}{tx-frak}{m}{n}
+\DeclareMathAlphabet{\mathbfrak}{OT1}{tx-frak}{b}{n}
+\DeclareMathAlphabet{\mathbb}{U}{dsss}{m}{n}
+\DeclareSymbolFont{operators}{T1}{uop}{m}{n}
+
+\DeclareSymbolFont{numbers}{T1}{pplx}{m}{n}
+\DeclareMathSymbol{0}\mathalpha{numbers}{`0}
+\DeclareMathSymbol{1}\mathalpha{numbers}{`1}
+\DeclareMathSymbol{2}\mathalpha{numbers}{`2}
+\DeclareMathSymbol{3}\mathalpha{numbers}{`3}
+\DeclareMathSymbol{4}\mathalpha{numbers}{`4}
+\DeclareMathSymbol{5}\mathalpha{numbers}{`5}
+\DeclareMathSymbol{6}\mathalpha{numbers}{`6}
+\DeclareMathSymbol{7}\mathalpha{numbers}{`7}
+\DeclareMathSymbol{8}\mathalpha{numbers}{`8}
+\DeclareMathSymbol{9}\mathalpha{numbers}{`9}
+
+\DeclareFontFamily{U}{mathastro}{}
+\DeclareFontShape{U}{mathastro}{m}{n}{<->mathastrotest10}{}
+\DeclareSymbolFont{astro}{U}{mathastro}{m}{n}
+\DeclareMathSymbol\Sun\mathord{astro}{'300}
+\DeclareMathSymbol\Mercury\mathord{astro}{'301}
+\DeclareMathSymbol\Venus\mathord{astro}{'302}
+\DeclareMathSymbol\Earth\mathord{astro}{'303}
+\DeclareMathSymbol\Mars\mathord{astro}{'304}
+\DeclareMathSymbol\Jupiter\mathord{astro}{'305}
+\DeclareMathSymbol\Saturn\mathord{astro}{'306}
+\DeclareMathSymbol\Uranus\mathord{astro}{'307}
+\DeclareMathSymbol\Neptune\mathord{astro}{'310}
+\DeclareMathSymbol\Pluto\mathord{astro}{'311}
+\DeclareMathSymbol\varEarth\mathord{astro}{'312}
+\DeclareMathSymbol\Moon\mathord{astro}{'313}
+\DeclareMathSymbol\leftmoon\mathord{astro}{'313}
+\DeclareMathSymbol\rightmoon\mathord{astro}{'314}
+\DeclareMathSymbol\fullmoon\mathord{astro}{'315}
+\DeclareMathSymbol\newmoon\mathord{astro}{'316}
+\DeclareMathSymbol\newmoon\mathord{astro}{'316}
+
+\setmainfont[
+	Ligatures=TeX,
+	Scale=0.98,
+	BoldFont=FOT-RodinNTLGPro-B,
+	ItalicFont=FOT-RodinNTLGPro-B,
+]{Palatino}
+\setsansfont[
+	Ligatures=TeX,
+	Scale=0.98,
+	BoldFont=FOT-RodinNTLGPro-B,
+	BoldItalicFont=FOT-RodinNTLGPro-B,
+	%ItalicFont=FOT-RodinNTLGPro-B,
+]{Palatino}
+\setmainjfont[
+	Ligatures=TeX,
+	JFM=jlreq,
+	BoldFont=FOT-RodinNTLGPro-B,
+	ItalicFont=FOT-RodinNTLGPro-B,
+]{FOT-ModeMinBLargePro-M}
+\setsansjfont[
+	Ligatures=TeX,
+	JFM=jlreq,
+	BoldFont=FOT-RodinNTLGPro-B,
+	ItalicFont=FOT-RodinNTLGPro-B,
+]{FOT-ModeMinBLargePro-M}
+\setmonofont[
+	Ligatures=TeXReset,
+]{HackGen}
+\setmonojfont[
+	Ligatures=TeXReset,
+]{HackGen}
+
+\allowdisplaybreaks[4]
+\ltjenableadjust[lineend=extended,priority=true,profile=true,linestep=false]
+
+%%%%%%%%%%%%自作マクロ
+\newcommand{\hmvec}{\mathbold}
+\newcommand{\hmeqdef}{\stackrel{\mathrm{def}}{=}}
+\newcommand{\hmeqq}{\stackrel{\mathrm{?}}{=}}
+\newcommand{\centeralign}[1]{\rule{0pt}{0pt}\hfill#1\hfill\rule{0pt}{0pt}}
+\NewDocumentCommand\hmu{s m}{\IfBooleanF{#1}{\,}\ifmmode\mathrm{#2}\else\(\mathrm{#2}\)\fi}
+\newcommand{\hmemph}[1]{\textbf{#1}}
+\newcommand{\hme}[1]{\times10^{#1}}
+\newcommand{\hmfnc}[1]{\(\mathrm{#1}\)}
+\newcommand{\hmfconv}{F_\mathrm{conv}}
+\NewDocumentCommand\etal{s}{\textit{et al.}\IfBooleanF{#1}{\ }}
+
+\institute{北海道大学大学院理学院 地球流体力学研究室 M2}
+\author{人見祥磨}
+\title{地球型惑星における南北熱輸送}
+\subtitle{その太陽定数への依存性}
+
+\begin{document}
+
+\maketitle
+
+\begin{frame}
+	\frametitle{背景}
+	\begin{itemize}
+		\item 系外惑星に生命が存在するためには、惑星表面に液体の水があることが
+			重要だと考えられる (Kopparapu \etal*, 2013)
+		\item 惑星表面に液体の水が存在する条件は、惑星の表面温度が水の
+			融点から沸点の間にあることである
+		\item 惑星表面に液体の水が存在しうる領域は、ハビタブルゾーン (HZ)と呼ばれる
+		\item ここでは HZ の内側の比較的高温な領域で起こる現象に着目する
+	\end{itemize}
+	\begin{figure}
+		\centering\scriptsize
+		\includegraphics[width=.5\textwidth]{kopparapu8.png}\\
+		様々な中心星の有効温度ごとに、雲がない場合の HZ を示したもの。
+		(Kopparapu \etal*, 2013; Fig.\ 8)
+	\end{figure}
+\end{frame}
+
+\end{document}
