@@ -245,7 +245,7 @@
 
 \begin{frame}
 	\frametitle{結果 \(S=1366\hmu{W/m^2}\) 30 年目}
-	\begin{columns}
+	\begin{columns}[T]
 		\begin{column}{.4\textwidth}
 			\includegraphics[height=\textwidth,angle=-90]{S1366U,time=10950-crop.pdf}
 			\includegraphics[height=\textwidth,angle=-90]{S1366SurfTemp,time=10950-crop.pdf}
@@ -258,7 +258,7 @@
 
 \begin{frame}
 	\frametitle{結果 \(S=1500\hmu{W/m^2}\) 3 年目}
-	\begin{columns}
+	\begin{columns}[T]
 		\begin{column}{.4\textwidth}
 			\includegraphics[height=\textwidth,angle=-90]{S1500U,time=1095-crop.pdf}
 			\includegraphics[height=\textwidth,angle=-90]{S1500SurfTemp,time=1095-crop.pdf}
@@ -271,7 +271,7 @@
 
 \begin{frame}
 	\frametitle{結果 \(S=1600\hmu{W/m^2}\) 10 年目}
-	\begin{columns}
+	\begin{columns}[T]
 		\begin{column}{.4\textwidth}
 			\includegraphics[height=\textwidth,angle=-90]{S1600U,time=3650-crop.pdf}
 			\includegraphics[height=\textwidth,angle=-90]{S1600SurfTemp,time=3650-crop.pdf}
@@ -284,7 +284,7 @@
 
 \begin{frame}
 	\frametitle{結果 \(S=1800\hmu{W/m^2}\) 10 年目}
-	\begin{columns}
+	\begin{columns}[T]
 		\begin{column}{.4\textwidth}
 			\includegraphics[height=\textwidth,angle=-90]{S1800U,time=3650-crop.pdf}
 			\includegraphics[height=\textwidth,angle=-90]{S1800SurfTemp,time=3650-crop.pdf}
@@ -293,6 +293,43 @@
 			\includegraphics[height=\textwidth,angle=-90]{S1800Temp,time=3650-crop.pdf}
 		\end{column}
 	\end{columns}
+\end{frame}
+
+\begin{frame}
+	\frametitle{結果 \(S=2000\hmu{W/m^2}\) 10 年目}
+	\begin{columns}[T]
+		\begin{column}{.4\textwidth}
+			%\includegraphics[height=\textwidth,angle=-90]{S1800U,time=3650-crop.pdf}
+			%\includegraphics[height=\textwidth,angle=-90]{S1800SurfTemp,time=3650-crop.pdf}
+		\end{column}
+		\begin{column}{.4\textwidth}
+			%\includegraphics[height=\textwidth,angle=-90]{S1800Temp,time=3650-crop.pdf}
+		\end{column}
+	\end{columns}
+\end{frame}
+
+\begin{frame}
+	\frametitle{南北熱輸送}
+	\begin{gather*}
+		\mathrm{moistStatEnFlxLat}=(\mathrm{dryStatEnFlxLat}+\mathrm{latentEn})\frac{v}{\rho}\\
+		\mathrm{latentEnFlxLat}=\mathrm{latentEn}\frac{v}{\rho}\\
+		\mathrm{dryStatEnFlxLat}=\mathrm{dryStatEn}\frac{v}{\rho}
+	\end{gather*}
+\end{frame}
+
+\begin{frame}
+	\frametitle{結果 南北熱輸送}
+	\begin{columns}
+		\begin{column}{.4\textwidth}
+			\begin{center}
+				\includegraphics[height=\textwidth,angle=-90]{S1366EngyFlx,time=10950-crop.pdf}\\
+				\(S=1366\hmu{W/m^2}\)
+			\end{center}
+		\end{column}
+		\begin{column}{.4\textwidth}
+		\end{column}
+	\end{columns}
+	実線: dryStatEnFlxLat; 破線: latentEnFlxLat; 鎖線: moistStatFlxLat;
 \end{frame}
 
 \begin{frame}
