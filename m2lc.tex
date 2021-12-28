@@ -177,7 +177,7 @@
 					である (Nakajima \etal 1992)
 				\item 灰色 3 次元モデルでも放射上限は現れる (IshiwatAri \etal 2002)
 			\end{itemize}
-		\item 非灰色の 3 次元モデルでは暴走温室に関する議論は行われていなかった
+		\item 非灰色の 3 次元モデルでは暴走温室に関する議論は学会発表程度しかなかった
 	\end{itemize}
 	\begin{columns}[b,onlytextwidth]
 		\begin{column}{.45\textwidth}
@@ -202,7 +202,11 @@
 
 
 \begin{frame}
-	\frametitle{背景}
+	\frametitle{研究目的}
+	\begin{itemize}
+		\item 非灰色の 3 次元モデルで太陽定数を変えて計算する
+		\item 南北熱輸送に関して考察する
+	\end{itemize}
 \end{frame}
 
 \begin{frame}
@@ -216,11 +220,79 @@
 			\begin{itemize}
 				\item 以下の 3 次元球殻上プリミティヴ方程式
 			\end{itemize}
+		\item 解像度 T42L26
 	\end{itemize}
+	\tiny
+	\begin{gather*}
+		\pdv{\pi}{t}+\hmvec{v}_H\cdot\nabla_\sigma\pi=-D-\pdv{\dot \sigma}{\sigma}\tag{連続の式}\\
+		\pdv{\Phi}{\sigma}=-\frac{RT_v}{\sigma}\tag{静水圧の式}\\
+		\pdv{\zeta}{t}=\frac{1}{a}\qty(\frac{1}{1-\mu^2}\pdv{V_A}{\lambda}-\pdv{U_A}{\mu})+\mathcal{D}[\zeta],\qquad
+		\pdv{D}{t}=\frac{1}{a}\qty(\frac{1}{1-\mu^2}\pdv{U_A}{\lambda})
+			-\nabla^2_\sigma(\Phi+R\bar T\pi+KE)+\mathcal{D}[D]\tag{運動方程式}\\
+		\pdv{T}{t}=-\frac{1}{a}\qty(\frac{1}{1-\mu^2}\pdv{UT'}{\lambda}+\pdv{VT'}{\mu})+T'D-\dot\sigma\pdv{T}{\sigma}
+			+\kappa T_v\qty(\pdv{\pi}{t}+\hmvec{v}_H\cdot\nabla_\sigma\pi+\frac{\dot\sigma}{\sigma})
+			+\frac{Q}{C_p}+\mathcal{D}[T]+\mathcal{D}'[\hmvec{v}]\tag{熱力学の式}\\
+		\pdv{q}{t}=-\frac{1}{a}\qty(\frac{1}{1-\mu^2}\pdv{U_q}{\lambda}+\pdv{V_q}{\mu})
+			+qD-\dot\sigma\pdv{q}{\sigma}+S_q+\mathcal{D}[q]\tag{水蒸気の式}\\
+	\end{gather*}
+	\(\varphi,\lambda\): 緯度経度; \(\sigma:=p/p_s\): \(\sigma\) 座標高度; \(t\): 時間;
+	\(\pi:=\ln[p_s]\); \(T\): 気温; \(q\): 比湿; \(a\): 惑星半径;\\
+	\(\zeta:=(1/a)((1/(1-\mu^2))(\pdv*{V}{\lambda})-\pdv*{U}{\mu})\): 渦度;
+	\(\zeta:=(1/a)((1/(1-\mu^2))(\pdv*{U}{\lambda})+\pdv*{V}{\mu})\): 発散;\\
+	\(u,v\): 東西・南北風速; \((U,V):=(u\cos\varphi,v\cos\varphi)\);
+	\(\mathcal{D}\): 水平拡散; \(\mathcal{D}'[\hmvec{v}]\): 摩擦熱;
 \end{frame}
 
 \begin{frame}
-	\frametitle{結果}
+	\frametitle{結果 \(S=1366\hmu{W/m^2}\) 30 年目}
+	\begin{columns}
+		\begin{column}{.4\textwidth}
+			\includegraphics[height=\textwidth,angle=-90]{S1366U,time=10950-crop.pdf}
+			\includegraphics[height=\textwidth,angle=-90]{S1366SurfTemp,time=10950-crop.pdf}
+		\end{column}
+		\begin{column}{.4\textwidth}
+			\includegraphics[height=\textwidth,angle=-90]{S1366Temp,time=10950-crop.pdf}
+		\end{column}
+	\end{columns}
+\end{frame}
+
+\begin{frame}
+	\frametitle{結果 \(S=1500\hmu{W/m^2}\) 3 年目}
+	\begin{columns}
+		\begin{column}{.4\textwidth}
+			\includegraphics[height=\textwidth,angle=-90]{S1500U,time=1095-crop.pdf}
+			\includegraphics[height=\textwidth,angle=-90]{S1500SurfTemp,time=1095-crop.pdf}
+		\end{column}
+		\begin{column}{.4\textwidth}
+			\includegraphics[height=\textwidth,angle=-90]{S1500Temp,time=1095-crop.pdf}
+		\end{column}
+	\end{columns}
+\end{frame}
+
+\begin{frame}
+	\frametitle{結果 \(S=1600\hmu{W/m^2}\) 10 年目}
+	\begin{columns}
+		\begin{column}{.4\textwidth}
+			\includegraphics[height=\textwidth,angle=-90]{S1600U,time=3650-crop.pdf}
+			\includegraphics[height=\textwidth,angle=-90]{S1600SurfTemp,time=3650-crop.pdf}
+		\end{column}
+		\begin{column}{.4\textwidth}
+			\includegraphics[height=\textwidth,angle=-90]{S1600Temp,time=3650-crop.pdf}
+		\end{column}
+	\end{columns}
+\end{frame}
+
+\begin{frame}
+	\frametitle{結果 \(S=1800\hmu{W/m^2}\) 10 年目}
+	\begin{columns}
+		\begin{column}{.4\textwidth}
+			\includegraphics[height=\textwidth,angle=-90]{S1800U,time=3650-crop.pdf}
+			\includegraphics[height=\textwidth,angle=-90]{S1800SurfTemp,time=3650-crop.pdf}
+		\end{column}
+		\begin{column}{.4\textwidth}
+			\includegraphics[height=\textwidth,angle=-90]{S1800Temp,time=3650-crop.pdf}
+		\end{column}
+	\end{columns}
 \end{frame}
 
 \begin{frame}
