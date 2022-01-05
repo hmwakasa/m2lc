@@ -141,8 +141,7 @@
 
 \institute{北海道大学大学院理学院 地球流体力学研究室 M2}
 \author{人見祥磨}
-\title{地球型惑星における南北熱輸送}
-\subtitle{その太陽定数への依存性}
+\title{水惑星における南北熱輸送の太陽定数への依存性}
 
 \begin{document}
 
@@ -153,10 +152,9 @@
 	\begin{itemize}
 		\item 系外惑星に生命が存在するためには、惑星表面に液体の水があることが
 			重要だと考えられる (Kopparapu \etal*, 2013)
-		\item 惑星表面に液体の水が存在する条件は、惑星の表面温度が水の
-			融点から沸点の間にあることである
 		\item 惑星表面に液体の水が存在しうる領域は、ハビタブルゾーン (HZ)と呼ばれる
-		\item ここでは HZ の内側の比較的高温な領域で起こる現象に着目する
+		\item HZ より内側では、水が蒸発しきってしまうほど太陽定数が大きいと考えられる
+		\item ここでは太陽定数を増やした時に気候がどう変化するか着目する
 	\end{itemize}
 	\begin{figure}
 		\centering\scriptsize
@@ -211,17 +209,22 @@
 
 \begin{frame}
 	\frametitle{モデル}
-	\begin{itemize}
-		\item 利用したモデル
+	\begin{columns}[T,onlytextwidth]
+		\begin{column}{.45\textwidth}
 			\begin{itemize}
-				\item DCPAM5
+				\item 利用したモデル
+					\begin{itemize}
+						\item DCPAM5
+					\end{itemize}
+				\item 基礎方程式
+					\begin{itemize}
+						\item 以下の 3 次元球殻上プリミティヴ方程式
+					\end{itemize}
 			\end{itemize}
-		\item 基礎方程式
-			\begin{itemize}
-				\item 以下の 3 次元球殻上プリミティヴ方程式
-			\end{itemize}
-		\item 解像度 T42L26
-	\end{itemize}
+		\end{column}
+		\begin{column}{.45\textwidth}
+		\end{column}
+	\end{columns}
 	\tiny
 	\begin{gather*}
 		\pdv{\pi}{t}+\hmvec{v}_H\cdot\nabla_\sigma\pi=-D-\pdv{\dot \sigma}{\sigma}\tag{連続の式}\\
@@ -244,66 +247,93 @@
 \end{frame}
 
 \begin{frame}
-	\frametitle{結果 \(S=1366\hmu{W/m^2}\) 30 年目}
+	\frametitle{実験設定}
+	\begin{itemize}
+		\item 水惑星
+		\item 解像度 T42L26
+		\item 太陽定数 \(S\) と積分時間
+			\begin{center}
+				\begin{tblr}{lrrrrr}
+					\hline
+					\(S\hmu{[W/m^2]}\)&\(1366\)&\(1500\)&\(1600\)&\(1800\)&\(2000\)\\
+					積分時間（年）&40&3&10&10&20\\
+					\hline
+				\end{tblr}
+			\end{center}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{結果 （OLRA の時間推移）}
 	\begin{columns}[T]
-		\begin{column}{.4\textwidth}
-			\includegraphics[height=\textwidth,angle=-90]{S1366U,time=10950-crop.pdf}
-			\includegraphics[height=\textwidth,angle=-90]{S1366SurfTemp,time=10950-crop.pdf}
+		\begin{column}{.3\textwidth}
+			\centering
+			\includegraphics[width=\textwidth]{S1366/S1300_OLRA_horimean_time0.0-14600.0-crop.png}
+			\(S=1366\hmu{W/m^2}\)\\
+			\includegraphics[width=\textwidth]{S1500/S1500_OLRA_horimean_time0.0-1095.0-crop.png}
+			\(S=1500\hmu{W/m^2}\)
 		\end{column}
-		\begin{column}{.4\textwidth}
-			\includegraphics[height=\textwidth,angle=-90]{S1366Temp,time=10950-crop.pdf}
+		\begin{column}{.3\textwidth}
+			\centering
+			\includegraphics[width=\textwidth]{S1600/S1600_OLRA_horimean_time0.0-3650.0-crop.png}
+			\(S=1600\hmu{W/m^2}\)\\
+			\includegraphics[width=\textwidth]{S1800/S1800_OLRA_horimean_time0.0-3650.0-crop.png}
+			\(S=1800\hmu{W/m^2}\)
+		\end{column}
+		\begin{column}{.3\textwidth}
+			\centering
+			\includegraphics[width=\textwidth]{S2000/S2000_OLRA_horimean_time0.0-7300.0-crop.png}
+			\(S=2000\hmu{W/m^2}\)
 		\end{column}
 	\end{columns}
 \end{frame}
 
 \begin{frame}
-	\frametitle{結果 \(S=1500\hmu{W/m^2}\) 3 年目}
+	\frametitle{結果 （地表面温度; 計算終了年での平均）}
 	\begin{columns}[T]
-		\begin{column}{.4\textwidth}
-			\includegraphics[height=\textwidth,angle=-90]{S1500U,time=1095-crop.pdf}
-			\includegraphics[height=\textwidth,angle=-90]{S1500SurfTemp,time=1095-crop.pdf}
+		\begin{column}{.3\textwidth}
+			\centering
+			\includegraphics[height=\textwidth,angle=-90]{S1366/SurfTemp,time=14235:14600-crop.pdf}
+			\(S=1366\hmu{W/m^2}\)\\
+			\includegraphics[height=\textwidth,angle=-90]{S1500/SurfTemp,time=730:1095-crop.pdf}
+			\(S=1500\hmu{W/m^2}\)
 		\end{column}
-		\begin{column}{.4\textwidth}
-			\includegraphics[height=\textwidth,angle=-90]{S1500Temp,time=1095-crop.pdf}
+		\begin{column}{.3\textwidth}
+			\centering
+			\includegraphics[height=\textwidth,angle=-90]{S1600/SurfTemp,time=3285:3650-crop.pdf}
+			\(S=1600\hmu{W/m^2}\)\\
+			\includegraphics[height=\textwidth,angle=-90]{S1800/SurfTemp,time=3285:3650-crop.pdf}
+			\(S=1800\hmu{W/m^2}\)
+		\end{column}
+		\begin{column}{.3\textwidth}
+			\centering
+			\includegraphics[height=\textwidth,angle=-90]{S2000/SurfTemp,time=6935:7300-crop.pdf}
+			\(S=2000\hmu{W/m^2}\)
 		\end{column}
 	\end{columns}
 \end{frame}
 
 \begin{frame}
-	\frametitle{結果 \(S=1600\hmu{W/m^2}\) 10 年目}
+	\frametitle{結果 （東西風; 計算終了年での平均）}
 	\begin{columns}[T]
-		\begin{column}{.4\textwidth}
-			\includegraphics[height=\textwidth,angle=-90]{S1600U,time=3650-crop.pdf}
-			\includegraphics[height=\textwidth,angle=-90]{S1600SurfTemp,time=3650-crop.pdf}
+		\begin{column}{.3\textwidth}
+			\centering
+			\includegraphics[height=\textwidth,angle=-90]{S1366/U,time=14235:14600-crop.pdf}
+			\(S=1366\hmu{W/m^2}\)\\
+			\includegraphics[height=\textwidth,angle=-90]{S1500/U,time=730:1095-crop.pdf}
+			\(S=1500\hmu{W/m^2}\)
 		\end{column}
-		\begin{column}{.4\textwidth}
-			\includegraphics[height=\textwidth,angle=-90]{S1600Temp,time=3650-crop.pdf}
+		\begin{column}{.3\textwidth}
+			\centering
+			\includegraphics[height=\textwidth,angle=-90]{S1600/U,time=3285:3650-crop.pdf}
+			\(S=1600\hmu{W/m^2}\)\\
+			\includegraphics[height=\textwidth,angle=-90]{S1800/U,time=3285:3650-crop.pdf}
+			\(S=1800\hmu{W/m^2}\)
 		\end{column}
-	\end{columns}
-\end{frame}
-
-\begin{frame}
-	\frametitle{結果 \(S=1800\hmu{W/m^2}\) 10 年目}
-	\begin{columns}[T]
-		\begin{column}{.4\textwidth}
-			\includegraphics[height=\textwidth,angle=-90]{S1800U,time=3650-crop.pdf}
-			\includegraphics[height=\textwidth,angle=-90]{S1800SurfTemp,time=3650-crop.pdf}
-		\end{column}
-		\begin{column}{.4\textwidth}
-			\includegraphics[height=\textwidth,angle=-90]{S1800Temp,time=3650-crop.pdf}
-		\end{column}
-	\end{columns}
-\end{frame}
-
-\begin{frame}
-	\frametitle{結果 \(S=2000\hmu{W/m^2}\) 10 年目}
-	\begin{columns}[T]
-		\begin{column}{.4\textwidth}
-			%\includegraphics[height=\textwidth,angle=-90]{S1800U,time=3650-crop.pdf}
-			%\includegraphics[height=\textwidth,angle=-90]{S1800SurfTemp,time=3650-crop.pdf}
-		\end{column}
-		\begin{column}{.4\textwidth}
-			%\includegraphics[height=\textwidth,angle=-90]{S1800Temp,time=3650-crop.pdf}
+		\begin{column}{.3\textwidth}
+			\centering
+			\includegraphics[height=\textwidth,angle=-90]{S2000/U,time=6935:7300-crop.pdf}
+			\(S=2000\hmu{W/m^2}\)
 		\end{column}
 	\end{columns}
 \end{frame}
@@ -311,25 +341,141 @@
 \begin{frame}
 	\frametitle{南北熱輸送}
 	\begin{gather*}
-		\mathrm{moistStatEnFlxLat}=(\mathrm{dryStatEnFlxLat}+\mathrm{latentEn})\frac{v}{\rho}\\
-		\mathrm{latentEnFlxLat}=\mathrm{latentEn}\frac{v}{\rho}\\
-		\mathrm{dryStatEnFlxLat}=\mathrm{dryStatEn}\frac{v}{\rho}
+		\mathrm{latentEnFlxLat}=\int Lqv\,dp\tag{潜熱輸送}\\
+		\mathrm{dryStatEnFlxLat}=\int (C_pT+gh)v\,dp\tag{乾燥静的エネルギー}\\
+		\mathrm{moistStatEnFlxLat}=(\mathrm{dryStatEnFlxLat}+\mathrm{latentEn})\tag{湿潤静的エネルギー}
+		\\
+		%\mathrm{latentEnFlxLat}=\mathrm{latentEn}\frac{v}{\rho}\\
+		%\mathrm{dryStatEnFlxLat}=\mathrm{dryStatEn}\frac{v}{\rho}\\
+		%\mathrm{latentEn}=\rho Lq\\
+		%\mathrm{dryStatEn}=\rho (C_pT+gh)
 	\end{gather*}
 \end{frame}
 
 \begin{frame}
-	\frametitle{結果 南北熱輸送}
-	\begin{columns}
-		\begin{column}{.4\textwidth}
-			\begin{center}
-				\includegraphics[height=\textwidth,angle=-90]{S1366EngyFlx,time=10950-crop.pdf}\\
-				\(S=1366\hmu{W/m^2}\)
-			\end{center}
+	\frametitle{結果 （南北熱輸送; 計算終了年での平均）}
+	\begin{columns}[T]
+		\begin{column}{.3\textwidth}
+			\centering
+			\includegraphics[height=\textwidth,angle=-90]{S1366/EngyFlx,time=14235:14600-crop.pdf}
+			\(S=1366\hmu{W/m^2}\)\\
+			\includegraphics[height=\textwidth,angle=-90]{S1500/EngyFlx,time=730:1095-crop.pdf}
+			\(S=1500\hmu{W/m^2}\)
 		\end{column}
-		\begin{column}{.4\textwidth}
+		\begin{column}{.3\textwidth}
+			\centering
+			\includegraphics[height=\textwidth,angle=-90]{S1600/EngyFlx,time=3285:3650-crop.pdf}
+			\(S=1600\hmu{W/m^2}\)\\
+			\includegraphics[height=\textwidth,angle=-90]{S1800/EngyFlx,time=3285:3650-crop.pdf}
+			\(S=1800\hmu{W/m^2}\)
+		\end{column}
+		\begin{column}{.3\textwidth}
+			\centering
+			\includegraphics[height=\textwidth,angle=-90]{S2000/EngyFlx,time=6935:7300-crop.pdf}
+			\(S=2000\hmu{W/m^2}\)
 		\end{column}
 	\end{columns}
 	実線: dryStatEnFlxLat; 破線: latentEnFlxLat; 鎖線: moistStatFlxLat;
+\end{frame}
+
+\begin{frame}
+	\frametitle{結果 （南北風; 計算終了年での平均）}
+	\begin{columns}[T]
+		\begin{column}{.3\textwidth}
+			\centering
+			\includegraphics[height=\textwidth,angle=-90]{S1366/V,time=14235:14600-crop.pdf}
+			\(S=1366\hmu{W/m^2}\)\\
+			\includegraphics[height=\textwidth,angle=-90]{S1500/V,time=730:1095-crop.pdf}
+			\(S=1500\hmu{W/m^2}\)
+		\end{column}
+		\begin{column}{.3\textwidth}
+			\centering
+			\includegraphics[height=\textwidth,angle=-90]{S1600/V,time=3285:3650-crop.pdf}
+			\(S=1600\hmu{W/m^2}\)\\
+			\includegraphics[height=\textwidth,angle=-90]{S1800/V,time=3285:3650-crop.pdf}
+			\(S=1800\hmu{W/m^2}\)
+		\end{column}
+		\begin{column}{.3\textwidth}
+			\centering
+			\includegraphics[height=\textwidth,angle=-90]{S2000/V,time=6935:7300-crop.pdf}
+			\(S=2000\hmu{W/m^2}\)
+		\end{column}
+	\end{columns}
+\end{frame}
+
+\begin{frame}
+	\frametitle{結果 （比湿; 計算終了年での平均）}
+	\begin{columns}[T]
+		\begin{column}{.3\textwidth}
+			\centering
+			\includegraphics[height=\textwidth,angle=-90]{S1366/QH2OVap,time=14235:14600-crop.pdf}
+			\(S=1366\hmu{W/m^2}\)\\
+			\includegraphics[height=\textwidth,angle=-90]{S1500/QH2OVap,time=730:1095-crop.pdf}
+			\(S=1500\hmu{W/m^2}\)
+		\end{column}
+		\begin{column}{.3\textwidth}
+			\centering
+			\includegraphics[height=\textwidth,angle=-90]{S1600/QH2OVap,time=3285:3650-crop.pdf}
+			\(S=1600\hmu{W/m^2}\)\\
+			\includegraphics[height=\textwidth,angle=-90]{S1800/QH2OVap,time=3285:3650-crop.pdf}
+			\(S=1800\hmu{W/m^2}\)
+		\end{column}
+		\begin{column}{.3\textwidth}
+			\centering
+			\includegraphics[height=\textwidth,angle=-90]{S2000/QH2OVap,time=6935:7300-crop.pdf}
+			\(S=2000\hmu{W/m^2}\)
+		\end{column}
+	\end{columns}
+\end{frame}
+
+\begin{frame}
+	\frametitle{結果 （地表面温度; 計算終了年での平均）}
+	\begin{columns}[T]
+		\begin{column}{.3\textwidth}
+			\centering
+			\includegraphics[height=\textwidth,angle=-90]{S1366/Temp,time=14235:14600-crop.pdf}
+			\(S=1366\hmu{W/m^2}\)\\
+			\includegraphics[height=\textwidth,angle=-90]{S1500/Temp,time=730:1095-crop.pdf}
+			\(S=1500\hmu{W/m^2}\)
+		\end{column}
+		\begin{column}{.3\textwidth}
+			\centering
+			\includegraphics[height=\textwidth,angle=-90]{S1600/Temp,time=3285:3650-crop.pdf}
+			\(S=1600\hmu{W/m^2}\)\\
+			\includegraphics[height=\textwidth,angle=-90]{S1800/Temp,time=3285:3650-crop.pdf}
+			\(S=1800\hmu{W/m^2}\)
+		\end{column}
+		\begin{column}{.3\textwidth}
+			\centering
+			\includegraphics[height=\textwidth,angle=-90]{S2000/Temp,time=6935:7300-crop.pdf}
+			\(S=2000\hmu{W/m^2}\)
+		\end{column}
+	\end{columns}
+\end{frame}
+
+\begin{frame}
+	\frametitle{結果 （ジオポテンシャル高; 計算終了年での平均）}
+	\begin{columns}[T]
+		\begin{column}{.3\textwidth}
+			\centering
+			\includegraphics[height=\textwidth,angle=-90]{S1366/Height,time=14235:14600-crop.pdf}
+			\(S=1366\hmu{W/m^2}\)\\
+			\includegraphics[height=\textwidth,angle=-90]{S1500/Height,time=730:1095-crop.pdf}
+			\(S=1500\hmu{W/m^2}\)
+		\end{column}
+		\begin{column}{.3\textwidth}
+			\centering
+			\includegraphics[height=\textwidth,angle=-90]{S1600/Height,time=3285:3650-crop.pdf}
+			\(S=1600\hmu{W/m^2}\)\\
+			\includegraphics[height=\textwidth,angle=-90]{S1800/Height,time=3285:3650-crop.pdf}
+			\(S=1800\hmu{W/m^2}\)
+		\end{column}
+		\begin{column}{.3\textwidth}
+			\centering
+			\includegraphics[height=\textwidth,angle=-90]{S2000/Height,time=6935:7300-crop.pdf}
+			\(S=2000\hmu{W/m^2}\)
+		\end{column}
+	\end{columns}
 \end{frame}
 
 \begin{frame}
