@@ -253,11 +253,9 @@
 		\item 解像度 T42L26
 		\item 太陽定数 \(S\) と積分時間
 			\begin{center}
-				\begin{tblr}{lrrrrr}
-					\hline
+				\begin{tblr}{colspec={lrrrrr},hlines}
 					\(S\hmu{[W/m^2]}\)&\(1366\)&\(1500\)&\(1600\)&\(1800\)&\(2000\)\\
 					積分時間（年）&40&3&10&10&20\\
-					\hline
 				\end{tblr}
 			\end{center}
 	\end{itemize}
@@ -268,25 +266,49 @@
 	\begin{columns}[T]
 		\begin{column}{.3\textwidth}
 			\centering
-			\includegraphics[width=\textwidth]{S1366/S1300_OLRA_horimean_time0.0-14600.0-crop.png}
+			\includegraphics[width=\textwidth]{S1366/S1300_OLRA-OSRA_horimean_time0.0-14600.0-crop.png}
 			\(S=1366\hmu{W/m^2}\)\\
-			\includegraphics[width=\textwidth]{S1500/S1500_OLRA_horimean_time0.0-1095.0-crop.png}
+			\includegraphics[width=\textwidth]{S1500/S1500_OLRA-OSRA_horimean_time0.0-1095.0-crop.png}
 			\(S=1500\hmu{W/m^2}\)
 		\end{column}
 		\begin{column}{.3\textwidth}
 			\centering
-			\includegraphics[width=\textwidth]{S1600/S1600_OLRA_horimean_time0.0-3650.0-crop.png}
+			\includegraphics[width=\textwidth]{S1600/S1600_OLRA-OSRA_horimean_time0.0-3650.0-crop.png}
 			\(S=1600\hmu{W/m^2}\)\\
-			\includegraphics[width=\textwidth]{S1800/S1800_OLRA_horimean_time0.0-3650.0-crop.png}
+			\includegraphics[width=\textwidth]{S1800/S1800_OLRA-OSRA_horimean_time0.0-3650.0-crop.png}
 			\(S=1800\hmu{W/m^2}\)
 		\end{column}
 		\begin{column}{.3\textwidth}
 			\centering
-			\includegraphics[width=\textwidth]{S2000/S2000_OLRA_horimean_time0.0-7300.0-crop.png}
+			\includegraphics[width=\textwidth]{S2000/S2000_OLRA-OSRA_horimean_time0.0-7300.0-crop.png}
 			\(S=2000\hmu{W/m^2}\)
 		\end{column}
 	\end{columns}
 \end{frame}
+%\begin{frame}
+%	\frametitle{結果 （OLRA の時間推移）}
+%	\begin{columns}[T]
+%		\begin{column}{.3\textwidth}
+%			\centering
+%			\includegraphics[width=\textwidth]{S1366/S1300_OLRA_horimean_time0.0-14600.0-crop.png}
+%			\(S=1366\hmu{W/m^2}\)\\
+%			\includegraphics[width=\textwidth]{S1500/S1500_OLRA_horimean_time0.0-1095.0-crop.png}
+%			\(S=1500\hmu{W/m^2}\)
+%		\end{column}
+%		\begin{column}{.3\textwidth}
+%			\centering
+%			\includegraphics[width=\textwidth]{S1600/S1600_OLRA_horimean_time0.0-3650.0-crop.png}
+%			\(S=1600\hmu{W/m^2}\)\\
+%			\includegraphics[width=\textwidth]{S1800/S1800_OLRA_horimean_time0.0-3650.0-crop.png}
+%			\(S=1800\hmu{W/m^2}\)
+%		\end{column}
+%		\begin{column}{.3\textwidth}
+%			\centering
+%			\includegraphics[width=\textwidth]{S2000/S2000_OLRA_horimean_time0.0-7300.0-crop.png}
+%			\(S=2000\hmu{W/m^2}\)
+%		\end{column}
+%	\end{columns}
+%\end{frame}
 
 \begin{frame}
 	\frametitle{結果 （地表面温度; 計算終了年での平均）}
@@ -344,11 +366,6 @@
 		\mathrm{latentEnFlxLat}=\int Lqv\,dp\tag{潜熱輸送}\\
 		\mathrm{dryStatEnFlxLat}=\int (C_pT+gh)v\,dp\tag{乾燥静的エネルギー}\\
 		\mathrm{moistStatEnFlxLat}=(\mathrm{dryStatEnFlxLat}+\mathrm{latentEn})\tag{湿潤静的エネルギー}
-		\\
-		%\mathrm{latentEnFlxLat}=\mathrm{latentEn}\frac{v}{\rho}\\
-		%\mathrm{dryStatEnFlxLat}=\mathrm{dryStatEn}\frac{v}{\rho}\\
-		%\mathrm{latentEn}=\rho Lq\\
-		%\mathrm{dryStatEn}=\rho (C_pT+gh)
 	\end{gather*}
 \end{frame}
 
@@ -429,7 +446,7 @@
 \end{frame}
 
 \begin{frame}
-	\frametitle{結果 （地表面温度; 計算終了年での平均）}
+	\frametitle{結果 （気温; 計算終了年での平均）}
 	\begin{columns}[T]
 		\begin{column}{.3\textwidth}
 			\centering
@@ -480,6 +497,11 @@
 
 \begin{frame}
 	\frametitle{考察}
+	\begin{itemize}
+		\item 太陽定数が大きくなると潜熱輸送が大きくなる
+		\item 潜熱輸送を大きくしているのは何?（今後の課題）
+		\item 地表面温度の差が小さくなるのに、どうして輸送量は増えるのか?
+	\end{itemize}
 \end{frame}
 
 \end{document}
