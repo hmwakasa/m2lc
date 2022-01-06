@@ -1,0 +1,9322 @@
+%!PS-Adobe-2.0 EPSF-1.2
+%%DocumentFonts:
+%%Pages: 1
+%%BoundingBox: 61 85 610 408
+%%EndComments
+
+50 dict begin
+
+/arrowHeight 8 def
+/arrowWidth 4 def
+/none null def
+/numGraphicParameters 17 def
+/stringLimit 65535 def
+
+/Begin {
+save
+numGraphicParameters dict begin
+} def
+
+/End {
+end
+restore
+} def
+
+/SetB {
+dup type /nulltype eq {
+pop
+false /brushRightArrow idef
+false /brushLeftArrow idef
+true /brushNone idef
+} {
+/brushDashOffset idef
+/brushDashArray idef
+0 ne /brushRightArrow idef
+0 ne /brushLeftArrow idef
+/brushWidth idef
+false /brushNone idef
+} ifelse
+} def
+
+/SetCFg {
+/fgblue idef
+/fggreen idef
+/fgred idef
+} def
+
+/SetCBg {
+/bgblue idef
+/bggreen idef
+/bgred idef
+} def
+
+/SetF {
+/printSize idef
+/printFont idef
+} def
+
+/SetP {
+dup type /nulltype eq {
+pop true /patternNone idef
+} {
+/patternGrayLevel idef
+patternGrayLevel -1 eq {
+/patternString idef
+} if
+false /patternNone idef
+} ifelse
+} def
+
+/BSpl {
+0 begin
+storexyn
+newpath
+n 1 gt {
+0 0 0 0 0 0 1 1 true subspline
+n 2 gt {
+0 0 0 0 1 1 2 2 false subspline
+1 1 n 3 sub {
+/i exch def
+i 1 sub dup i dup i 1 add dup i 2 add dup false subspline
+} for
+n 3 sub dup n 2 sub dup n 1 sub dup 2 copy false subspline
+} if
+n 2 sub dup n 1 sub dup 2 copy 2 copy false subspline
+patternNone not brushLeftArrow not brushRightArrow not and and { ifill } if
+brushNone not { istroke } if
+0 0 1 1 leftarrow
+n 2 sub dup n 1 sub dup rightarrow
+} if
+end
+} dup 0 4 dict put def
+
+/Circ {
+newpath
+0 360 arc
+patternNone not { ifill } if
+brushNone not { istroke } if
+} def
+
+/CBSpl {
+0 begin
+dup 2 gt {
+storexyn
+newpath
+n 1 sub dup 0 0 1 1 2 2 true subspline
+1 1 n 3 sub {
+/i exch def
+i 1 sub dup i dup i 1 add dup i 2 add dup false subspline
+} for
+n 3 sub dup n 2 sub dup n 1 sub dup 0 0 false subspline
+n 2 sub dup n 1 sub dup 0 0 1 1 false subspline
+patternNone not { ifill } if
+brushNone not { istroke } if
+} {
+Poly
+} ifelse
+end
+} dup 0 4 dict put def
+
+
+/RRect { CBSpl } def
+
+/Elli {
+0 begin
+newpath
+4 2 roll
+translate
+scale
+0 0 1 0 360 arc
+patternNone not { ifill } if
+brushNone not { istroke } if
+end
+} dup 0 1 dict put def
+
+/Line {
+0 begin
+2 storexyn
+newpath
+x 0 get y 0 get moveto
+x 1 get y 1 get lineto
+brushNone not { istroke } if
+0 0 1 1 leftarrow
+0 0 1 1 rightarrow
+end
+} dup 0 4 dict put def
+
+/MLine {
+0 begin
+storexyn
+newpath
+n 1 gt {
+x 0 get y 0 get moveto
+1 1 n 1 sub {
+/i exch def
+x i get y i get lineto
+} for
+patternNone not brushLeftArrow not brushRightArrow not and and { ifill } if
+brushNone not { istroke } if
+0 0 1 1 leftarrow
+n 2 sub dup n 1 sub dup rightarrow
+} if
+end
+} dup 0 4 dict put def
+
+/Poly {
+3 1 roll
+newpath
+moveto
+-1 add
+{ lineto } repeat
+closepath
+patternNone not { ifill } if
+brushNone not { istroke } if
+} def
+
+/Rect {
+0 begin
+/t exch def
+/r exch def
+/b exch def
+/l exch def
+newpath
+l b moveto
+l t lineto
+r t lineto
+r b lineto
+closepath
+patternNone not { ifill } if
+brushNone not { istroke } if
+end
+} dup 0 4 dict put def
+
+/WhiteBg 1 def
+/HollowBg 0 def
+/Text { ishow } def
+
+/idef {
+dup where { pop pop pop } { exch def } ifelse
+} def
+
+/ifill {
+0 begin
+gsave
+patternGrayLevel -1 ne {
+fgred bgred fgred sub patternGrayLevel mul add
+fggreen bggreen fggreen sub patternGrayLevel mul add
+fgblue bgblue fgblue sub patternGrayLevel mul add setrgbcolor
+eofill
+} {
+eoclip
+originalCTM setmatrix
+pathbbox /t exch def /r exch def /b exch def /l exch def
+/w r l sub ceiling cvi def
+/h t b sub ceiling cvi def
+/imageByteWidth w 8 div ceiling cvi def
+/imageHeight h def
+bgred bggreen bgblue setrgbcolor
+eofill
+fgred fggreen fgblue setrgbcolor
+w 0 gt h 0 gt and {
+l b translate w h scale
+w h true [w 0 0 h neg 0 h] { patternproc } imagemask
+} if
+} ifelse
+grestore
+end
+} dup 0 8 dict put def
+
+/istroke {
+gsave
+brushDashOffset -1 eq {
+[] 0 setdash
+1 setgray
+} {
+brushDashArray brushDashOffset setdash
+fgred fggreen fgblue setrgbcolor
+} ifelse
+brushWidth setlinewidth
+originalCTM setmatrix
+stroke
+grestore
+} def
+
+/xdescender {
+begin 0
+FontType 0 eq
+{ FDepVector dup length 1 sub get xdescender }
+{ [FontBBox] 1 get } ifelse
+FontMatrix transform exch pop end
+} def
+/ishow {
+0 begin
+gsave
+fgred fggreen fgblue setrgbcolor
+WhiteBg eq /drawBg exch def
+/fontDict printFont findfont printSize scalefont dup setfont def
+/descender fontDict xdescender def
+/vertoffset 0 descender sub printSize sub printFont /Courier ne
+printFont /Courier-Bold ne and { 1 add } if def {
+drawBg {
+newpath 0 vertoffset descender add moveto
+dup stringwidth pop dup 0 rlineto
+0 printSize rlineto 0 exch sub 0 rlineto
+closepath currentgray 1 setgray fill	setgray } if
+0 vertoffset moveto show
+/vertoffset vertoffset printSize sub def
+} forall
+grestore
+end
+} dup 0 4 dict put def
+
+/patternproc {
+0 begin
+/patternByteLength patternString length def
+/patternHeight patternByteLength 8 mul sqrt cvi def
+/patternWidth patternHeight def
+/patternByteWidth patternWidth 8 idiv def
+/imageByteMaxLength imageByteWidth imageHeight mul
+stringLimit patternByteWidth sub min def
+/imageMaxHeight imageByteMaxLength imageByteWidth idiv patternHeight idiv
+patternHeight mul patternHeight max def
+/imageHeight imageHeight imageMaxHeight sub store
+/imageString imageByteWidth imageMaxHeight mul patternByteWidth add string def
+0 1 imageMaxHeight 1 sub {
+/y exch def
+/patternRow y patternByteWidth mul patternByteLength mod def
+/patternRowString patternString patternRow patternByteWidth getinterval def
+/imageRow y imageByteWidth mul def
+0 patternByteWidth imageByteWidth 1 sub {
+/x exch def
+imageString imageRow x add patternRowString putinterval
+} for
+} for
+imageString
+end
+} dup 0 12 dict put def
+
+/min {
+dup 3 2 roll dup 4 3 roll lt { exch } if pop
+} def
+
+/max {
+dup 3 2 roll dup 4 3 roll gt { exch } if pop
+} def
+
+/arrowhead {
+0 begin
+transform originalCTM itransform
+/taily exch def
+/tailx exch def
+transform originalCTM itransform
+/tipy exch def
+/tipx exch def
+/dy tipy taily sub def
+/dx tipx tailx sub def
+/angle dx 0 ne dy 0 ne or { dy dx atan } { 90 } ifelse def
+gsave
+originalCTM setmatrix
+tipx tipy translate
+angle rotate
+newpath
+0 0 moveto
+arrowHeight neg arrowWidth 2 div lineto
+arrowHeight neg arrowWidth 2 div neg lineto
+closepath
+patternNone not {
+originalCTM setmatrix
+/padtip arrowHeight 2 exp 0.25 arrowWidth 2 exp mul add sqrt brushWidth mul
+arrowWidth div def
+/padtail brushWidth 2 div def
+tipx tipy translate
+angle rotate
+padtip 0 translate
+arrowHeight padtip add padtail add arrowHeight div dup scale
+arrowheadpath
+ifill
+} if
+brushNone not {
+originalCTM setmatrix
+tipx tipy translate
+angle rotate
+arrowheadpath
+istroke
+} if
+grestore
+end
+} dup 0 9 dict put def
+
+/arrowheadpath {
+newpath
+0 0 moveto
+arrowHeight neg arrowWidth 2 div lineto
+arrowHeight neg arrowWidth 2 div neg lineto
+closepath
+} def
+
+/leftarrow {
+0 begin
+y exch get /taily exch def
+x exch get /tailx exch def
+y exch get /tipy exch def
+x exch get /tipx exch def
+brushLeftArrow { tipx tipy tailx taily arrowhead } if
+end
+} dup 0 4 dict put def
+
+/rightarrow {
+0 begin
+y exch get /tipy exch def
+x exch get /tipx exch def
+y exch get /taily exch def
+x exch get /tailx exch def
+brushRightArrow { tipx tipy tailx taily arrowhead } if
+end
+} dup 0 4 dict put def
+
+/midpoint {
+0 begin
+/y1 exch def
+/x1 exch def
+/y0 exch def
+/x0 exch def
+x0 x1 add 2 div
+y0 y1 add 2 div
+end
+} dup 0 4 dict put def
+
+/thirdpoint {
+0 begin
+/y1 exch def
+/x1 exch def
+/y0 exch def
+/x0 exch def
+x0 2 mul x1 add 3 div
+y0 2 mul y1 add 3 div
+end
+} dup 0 4 dict put def
+
+/subspline {
+0 begin
+/movetoNeeded exch def
+y exch get /y3 exch def
+x exch get /x3 exch def
+y exch get /y2 exch def
+x exch get /x2 exch def
+y exch get /y1 exch def
+x exch get /x1 exch def
+y exch get /y0 exch def
+x exch get /x0 exch def
+x1 y1 x2 y2 thirdpoint
+/p1y exch def
+/p1x exch def
+x2 y2 x1 y1 thirdpoint
+/p2y exch def
+/p2x exch def
+x1 y1 x0 y0 thirdpoint
+p1x p1y midpoint
+/p0y exch def
+/p0x exch def
+x2 y2 x3 y3 thirdpoint
+p2x p2y midpoint
+/p3y exch def
+/p3x exch def
+movetoNeeded { p0x p0y moveto } if
+p1x p1y p2x p2y p3x p3y curveto
+end
+} dup 0 17 dict put def
+
+/storexyn {
+/n exch def
+/y n array def
+/x n array def
+n 1 sub -1 0 {
+/i exch def
+y i 3 2 roll put
+x i 3 2 roll put
+} for
+} def
+
+%%EndProlog
+
+%I Idraw 9 Grid 8 
+
+%%Page: 1 1
+
+Begin
+%I b u
+%I cfg u
+%I cbg u
+%I f u
+%I k u
+%I p u
+%I t
+[ 0.2 0 0 0.2 0 0 ] concat
+/originalCTM matrix currentmatrix def
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 19
+1669 4028
+1675 4008
+1675 4048
+1669 4028
+1655 4041
+1635 4048
+1622 4048
+1601 4041
+1588 4028
+1581 4015
+1574 3994
+1574 3961
+1581 3940
+1588 3927
+1601 3914
+1622 3907
+1635 3907
+1655 3914
+1669 3927
+19 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 10
+1622 4048
+1608 4041
+1595 4028
+1588 4015
+1581 3994
+1581 3961
+1588 3940
+1595 3927
+1608 3914
+1622 3907
+10 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+1669 3961
+1669 3907
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+1675 3961
+1675 3907
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+1648 3961
+1696 3961
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+1763 4001
+1763 3907
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+1770 4001
+1770 3907
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 10
+1770 3961
+1776 3981
+1790 3994
+1803 4001
+1823 4001
+1830 3994
+1830 3988
+1823 3981
+1817 3988
+1823 3994
+10 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+1743 4001
+1770 4001
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+1743 3907
+1790 3907
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 17
+1945 4001
+1924 3994
+1911 3981
+1904 3961
+1904 3947
+1911 3927
+1924 3914
+1945 3907
+1958 3907
+1978 3914
+1992 3927
+1998 3947
+1998 3961
+1992 3981
+1978 3994
+1958 4001
+1945 4001
+17 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 8
+1945 4001
+1931 3994
+1918 3981
+1911 3961
+1911 3947
+1918 3927
+1931 3914
+1945 3907
+8 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 8
+1958 3907
+1971 3914
+1985 3927
+1992 3947
+1992 3961
+1985 3981
+1971 3994
+1958 4001
+8 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 7
+2072 4001
+2072 3927
+2079 3914
+2099 3907
+2113 3907
+2133 3914
+2146 3927
+7 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 4
+2079 4001
+2079 3927
+2086 3914
+2099 3907
+4 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+2146 4001
+2146 3907
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+2153 4001
+2153 3907
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+2052 4001
+2079 4001
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+2126 4001
+2153 4001
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+2146 3907
+2173 3907
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+2234 4001
+2234 3907
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+2241 4001
+2241 3907
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 7
+2241 3981
+2254 3994
+2274 4001
+2288 4001
+2308 3994
+2315 3981
+2315 3907
+7 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 4
+2288 4001
+2301 3994
+2308 3981
+2308 3907
+4 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+2214 4001
+2241 4001
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+2214 3907
+2261 3907
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+2288 3907
+2335 3907
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+2470 4048
+2470 3907
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+2476 4048
+2476 3907
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 14
+2470 3981
+2456 3994
+2443 4001
+2429 4001
+2409 3994
+2395 3981
+2389 3961
+2389 3947
+2395 3927
+2409 3914
+2429 3907
+2443 3907
+2456 3914
+2470 3927
+14 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 8
+2429 4001
+2416 3994
+2402 3981
+2395 3961
+2395 3947
+2402 3927
+2416 3914
+2429 3907
+8 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+2449 4048
+2476 4048
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+2470 3907
+2496 3907
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+2759 4048
+2759 3907
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+2766 4048
+2766 3907
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 6
+2719 4048
+2712 4008
+2712 4048
+2813 4048
+2813 4008
+2806 4048
+6 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+2739 3907
+2786 3907
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 17
+2880 3961
+2961 3961
+2961 3974
+2954 3988
+2947 3994
+2934 4001
+2914 4001
+2893 3994
+2880 3981
+2873 3961
+2873 3947
+2880 3927
+2893 3914
+2914 3907
+2927 3907
+2947 3914
+2961 3927
+17 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 3
+2954 3961
+2954 3981
+2947 3994
+3 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 8
+2914 4001
+2900 3994
+2887 3981
+2880 3961
+2880 3947
+2887 3927
+2900 3914
+2914 3907
+8 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+3008 4001
+3008 3907
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+3015 4001
+3015 3907
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 7
+3015 3981
+3028 3994
+3048 4001
+3062 4001
+3082 3994
+3089 3981
+3089 3907
+7 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 4
+3062 4001
+3075 3994
+3082 3981
+3082 3907
+4 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 7
+3089 3981
+3102 3994
+3122 4001
+3136 4001
+3156 3994
+3163 3981
+3163 3907
+7 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 4
+3136 4001
+3149 3994
+3156 3981
+3156 3907
+4 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+2988 4001
+3015 4001
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+2988 3907
+3035 3907
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+3062 3907
+3109 3907
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+3136 3907
+3183 3907
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+3203 4001
+3203 3860
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+3210 4001
+3210 3860
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 14
+3210 3981
+3223 3994
+3237 4001
+3250 4001
+3270 3994
+3284 3981
+3291 3961
+3291 3947
+3284 3927
+3270 3914
+3250 3907
+3237 3907
+3223 3914
+3210 3927
+14 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 8
+3250 4001
+3264 3994
+3277 3981
+3284 3961
+3284 3947
+3277 3927
+3264 3914
+3250 3907
+8 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+3183 4001
+3210 4001
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+3183 3860
+3230 3860
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 5
+3405 3920
+3398 3914
+3405 3907
+3412 3914
+3405 3920
+5 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+1548 1468
+5952 1468
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+1 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+1548 1468
+1548 1417
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+1 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+1792 1468
+1792 1417
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+1 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+2037 1468
+2037 1417
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+1 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+2282 1468
+2282 1417
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+1 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+2526 1468
+2526 1417
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+1 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+2771 1468
+2771 1417
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+1 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+3016 1468
+3016 1417
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+1 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+3261 1468
+3261 1417
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+1 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+3505 1468
+3505 1417
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+1 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+3750 1468
+3750 1417
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+1 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+3995 1468
+3995 1417
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+1 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+4239 1468
+4239 1417
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+1 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+4484 1468
+4484 1417
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+1 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+4729 1468
+4729 1417
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+1 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+4974 1468
+4974 1417
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+1 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+5218 1468
+5218 1417
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+1 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+5463 1468
+5463 1417
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+1 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+5708 1468
+5708 1417
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+1 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+5952 1468
+5952 1417
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+1548 1468
+1548 1366
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+2282 1468
+2282 1366
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+3016 1468
+3016 1366
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+3750 1468
+3750 1366
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+4484 1468
+4484 1366
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+5218 1468
+5218 1366
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+5952 1468
+5952 1366
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+1346 1189
+1456 1189
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 28
+1584 1220
+1578 1202
+1566 1189
+1548 1183
+1541 1183
+1523 1189
+1511 1202
+1505 1220
+1505 1226
+1511 1244
+1523 1257
+1541 1263
+1554 1263
+1572 1257
+1584 1244
+1590 1226
+1590 1189
+1584 1165
+1578 1153
+1566 1140
+1548 1134
+1529 1134
+1517 1140
+1511 1153
+1511 1159
+1517 1165
+1523 1159
+1517 1153
+28 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 8
+1541 1183
+1529 1189
+1517 1202
+1511 1220
+1511 1226
+1517 1244
+1529 1257
+1541 1263
+8 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 9
+1554 1263
+1566 1257
+1578 1244
+1584 1226
+1584 1189
+1578 1165
+1572 1153
+1560 1140
+1548 1134
+9 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 17
+1688 1263
+1670 1257
+1658 1238
+1652 1208
+1652 1189
+1658 1159
+1670 1140
+1688 1134
+1700 1134
+1719 1140
+1731 1159
+1737 1189
+1737 1208
+1731 1238
+1719 1257
+1700 1263
+1688 1263
+17 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 10
+1688 1263
+1676 1257
+1670 1251
+1664 1238
+1658 1208
+1658 1189
+1664 1159
+1670 1147
+1676 1140
+1688 1134
+10 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 10
+1700 1134
+1713 1140
+1719 1147
+1725 1159
+1731 1189
+1731 1208
+1725 1238
+1719 1251
+1713 1257
+1700 1263
+10 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+2080 1189
+2190 1189
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 28
+2312 1244
+2306 1238
+2312 1232
+2318 1238
+2318 1244
+2312 1257
+2300 1263
+2282 1263
+2263 1257
+2251 1244
+2245 1232
+2239 1208
+2239 1171
+2245 1153
+2257 1140
+2276 1134
+2288 1134
+2306 1140
+2318 1153
+2325 1171
+2325 1177
+2318 1195
+2306 1208
+2288 1214
+2282 1214
+2263 1208
+2251 1195
+2245 1177
+28 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 9
+2282 1263
+2269 1257
+2257 1244
+2251 1232
+2245 1208
+2245 1171
+2251 1153
+2263 1140
+2276 1134
+9 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 8
+2288 1134
+2300 1140
+2312 1153
+2318 1171
+2318 1177
+2312 1195
+2300 1208
+2288 1214
+8 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 17
+2422 1263
+2404 1257
+2392 1238
+2386 1208
+2386 1189
+2392 1159
+2404 1140
+2422 1134
+2435 1134
+2453 1140
+2465 1159
+2471 1189
+2471 1208
+2465 1238
+2453 1257
+2435 1263
+2422 1263
+17 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 10
+2422 1263
+2410 1257
+2404 1251
+2398 1238
+2392 1208
+2392 1189
+2398 1159
+2404 1147
+2410 1140
+2422 1134
+10 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 10
+2435 1134
+2447 1140
+2453 1147
+2459 1159
+2465 1189
+2465 1208
+2459 1238
+2453 1251
+2447 1257
+2435 1263
+10 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+2814 1189
+2924 1189
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 15
+2979 1238
+2985 1232
+2979 1226
+2973 1232
+2973 1238
+2979 1251
+2985 1257
+3004 1263
+3028 1263
+3046 1257
+3053 1244
+3053 1226
+3046 1214
+3028 1208
+3010 1208
+15 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 6
+3028 1263
+3040 1257
+3046 1244
+3046 1226
+3040 1214
+3028 1208
+6 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 16
+3028 1208
+3040 1202
+3053 1189
+3059 1177
+3059 1159
+3053 1147
+3046 1140
+3028 1134
+3004 1134
+2985 1140
+2979 1147
+2973 1159
+2973 1165
+2979 1171
+2985 1165
+2979 1159
+16 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 6
+3046 1195
+3053 1177
+3053 1159
+3046 1147
+3040 1140
+3028 1134
+6 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 17
+3157 1263
+3138 1257
+3126 1238
+3120 1208
+3120 1189
+3126 1159
+3138 1140
+3157 1134
+3169 1134
+3187 1140
+3199 1159
+3205 1189
+3205 1208
+3199 1238
+3187 1257
+3169 1263
+3157 1263
+17 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 10
+3157 1263
+3144 1257
+3138 1251
+3132 1238
+3126 1208
+3126 1189
+3132 1159
+3138 1147
+3144 1140
+3157 1134
+10 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 10
+3169 1134
+3181 1140
+3187 1147
+3193 1159
+3199 1189
+3199 1208
+3193 1238
+3187 1251
+3181 1257
+3169 1263
+10 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 17
+3744 1263
+3726 1257
+3713 1238
+3707 1208
+3707 1189
+3713 1159
+3726 1140
+3744 1134
+3756 1134
+3774 1140
+3787 1159
+3793 1189
+3793 1208
+3787 1238
+3774 1257
+3756 1263
+3744 1263
+17 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 10
+3744 1263
+3732 1257
+3726 1251
+3719 1238
+3713 1208
+3713 1189
+3719 1159
+3726 1147
+3732 1140
+3744 1134
+10 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 10
+3756 1134
+3768 1140
+3774 1147
+3781 1159
+3787 1189
+3787 1208
+3781 1238
+3774 1251
+3768 1257
+3756 1263
+10 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 15
+4374 1238
+4380 1232
+4374 1226
+4368 1232
+4368 1238
+4374 1251
+4380 1257
+4399 1263
+4423 1263
+4441 1257
+4447 1244
+4447 1226
+4441 1214
+4423 1208
+4405 1208
+15 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 6
+4423 1263
+4435 1257
+4441 1244
+4441 1226
+4435 1214
+4423 1208
+6 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 16
+4423 1208
+4435 1202
+4447 1189
+4454 1177
+4454 1159
+4447 1147
+4441 1140
+4423 1134
+4399 1134
+4380 1140
+4374 1147
+4368 1159
+4368 1165
+4374 1171
+4380 1165
+4374 1159
+16 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 6
+4441 1195
+4447 1177
+4447 1159
+4441 1147
+4435 1140
+4423 1134
+6 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 17
+4551 1263
+4533 1257
+4521 1238
+4515 1208
+4515 1189
+4521 1159
+4533 1140
+4551 1134
+4564 1134
+4582 1140
+4594 1159
+4600 1189
+4600 1208
+4594 1238
+4582 1257
+4564 1263
+4551 1263
+17 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 10
+4551 1263
+4539 1257
+4533 1251
+4527 1238
+4521 1208
+4521 1189
+4527 1159
+4533 1147
+4539 1140
+4551 1134
+10 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 10
+4564 1134
+4576 1140
+4582 1147
+4588 1159
+4594 1189
+4594 1208
+4588 1238
+4582 1251
+4576 1257
+4564 1263
+10 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 28
+5175 1244
+5169 1238
+5175 1232
+5182 1238
+5182 1244
+5175 1257
+5163 1263
+5145 1263
+5127 1257
+5114 1244
+5108 1232
+5102 1208
+5102 1171
+5108 1153
+5120 1140
+5139 1134
+5151 1134
+5169 1140
+5182 1153
+5188 1171
+5188 1177
+5182 1195
+5169 1208
+5151 1214
+5145 1214
+5127 1208
+5114 1195
+5108 1177
+28 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 9
+5145 1263
+5133 1257
+5120 1244
+5114 1232
+5108 1208
+5108 1171
+5114 1153
+5127 1140
+5139 1134
+9 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 8
+5151 1134
+5163 1140
+5175 1153
+5182 1171
+5182 1177
+5175 1195
+5163 1208
+5151 1214
+8 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 17
+5286 1263
+5267 1257
+5255 1238
+5249 1208
+5249 1189
+5255 1159
+5267 1140
+5286 1134
+5298 1134
+5316 1140
+5328 1159
+5335 1189
+5335 1208
+5328 1238
+5316 1257
+5298 1263
+5286 1263
+17 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 10
+5286 1263
+5273 1257
+5267 1251
+5261 1238
+5255 1208
+5255 1189
+5261 1159
+5267 1147
+5273 1140
+5286 1134
+10 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 10
+5298 1134
+5310 1140
+5316 1147
+5322 1159
+5328 1189
+5328 1208
+5322 1238
+5316 1251
+5310 1257
+5298 1263
+10 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 28
+5916 1220
+5910 1202
+5897 1189
+5879 1183
+5873 1183
+5855 1189
+5842 1202
+5836 1220
+5836 1226
+5842 1244
+5855 1257
+5873 1263
+5885 1263
+5904 1257
+5916 1244
+5922 1226
+5922 1189
+5916 1165
+5910 1153
+5897 1140
+5879 1134
+5861 1134
+5848 1140
+5842 1153
+5842 1159
+5848 1165
+5855 1159
+5848 1153
+28 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 8
+5873 1183
+5861 1189
+5848 1202
+5842 1220
+5842 1226
+5848 1244
+5861 1257
+5873 1263
+8 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 9
+5885 1263
+5897 1257
+5910 1244
+5916 1226
+5916 1189
+5910 1165
+5904 1153
+5891 1140
+5879 1134
+9 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 17
+6020 1263
+6001 1257
+5989 1238
+5983 1208
+5983 1189
+5989 1159
+6001 1140
+6020 1134
+6032 1134
+6050 1140
+6063 1159
+6069 1189
+6069 1208
+6063 1238
+6050 1257
+6032 1263
+6020 1263
+17 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 10
+6020 1263
+6008 1257
+6001 1251
+5995 1238
+5989 1208
+5989 1189
+5995 1159
+6001 1147
+6008 1140
+6020 1134
+10 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 10
+6032 1134
+6044 1140
+6050 1147
+6056 1159
+6063 1189
+6063 1208
+6056 1238
+6050 1251
+6044 1257
+6032 1263
+10 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+1548 3671
+5952 3671
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+1 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+1548 3671
+1548 3722
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+1 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+1792 3671
+1792 3722
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+1 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+2037 3671
+2037 3722
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+1 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+2282 3671
+2282 3722
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+1 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+2526 3671
+2526 3722
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+1 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+2771 3671
+2771 3722
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+1 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+3016 3671
+3016 3722
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+1 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+3261 3671
+3261 3722
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+1 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+3505 3671
+3505 3722
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+1 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+3750 3671
+3750 3722
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+1 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+3995 3671
+3995 3722
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+1 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+4239 3671
+4239 3722
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+1 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+4484 3671
+4484 3722
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+1 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+4729 3671
+4729 3722
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+1 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+4974 3671
+4974 3722
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+1 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+5218 3671
+5218 3722
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+1 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+5463 3671
+5463 3722
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+1 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+5708 3671
+5708 3722
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+1 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+5952 3671
+5952 3722
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+1548 3671
+1548 3774
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+2282 3671
+2282 3774
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+3016 3671
+3016 3774
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+3750 3671
+3750 3774
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+4484 3671
+4484 3774
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+5218 3671
+5218 3774
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+5952 3671
+5952 3774
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+3236 1013
+3236 885
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+3242 1013
+3242 885
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+3218 1013
+3242 1013
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+3218 885
+3261 885
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 13
+3358 958
+3358 952
+3352 952
+3352 958
+3358 964
+3371 970
+3395 970
+3407 964
+3414 958
+3420 946
+3420 903
+3426 891
+3432 885
+13 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 5
+3414 958
+3414 903
+3420 891
+3432 885
+3438 885
+5 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 11
+3414 946
+3407 940
+3371 934
+3352 927
+3346 915
+3346 903
+3352 891
+3371 885
+3389 885
+3401 891
+3414 903
+11 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 6
+3371 934
+3358 927
+3352 915
+3352 903
+3358 891
+3371 885
+6 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 7
+3518 1013
+3518 909
+3524 891
+3536 885
+3548 885
+3560 891
+3566 903
+7 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 4
+3524 1013
+3524 909
+3530 891
+3536 885
+4 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+3499 970
+3548 970
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 5
+3677 1013
+3670 1007
+3677 1001
+3683 1007
+3677 1013
+5 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+3677 970
+3677 885
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+3683 970
+3683 885
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+3658 970
+3683 970
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+3658 885
+3701 885
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 7
+3811 1013
+3811 909
+3817 891
+3830 885
+3842 885
+3854 891
+3860 903
+7 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 4
+3817 1013
+3817 909
+3823 891
+3830 885
+4 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+3793 970
+3842 970
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 7
+3934 970
+3934 903
+3940 891
+3958 885
+3970 885
+3989 891
+4001 903
+7 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 4
+3940 970
+3940 903
+3946 891
+3958 885
+4 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+4001 970
+4001 885
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+4007 970
+4007 885
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+3915 970
+3940 970
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+3982 970
+4007 970
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+4001 885
+4025 885
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+4148 1013
+4148 885
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+4154 1013
+4154 885
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 14
+4148 952
+4135 964
+4123 970
+4111 970
+4093 964
+4080 952
+4074 934
+4074 921
+4080 903
+4093 891
+4111 885
+4123 885
+4135 891
+4148 903
+14 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 8
+4111 970
+4099 964
+4086 952
+4080 934
+4080 921
+4086 903
+4099 891
+4111 885
+8 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+4129 1013
+4154 1013
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+4148 885
+4172 885
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 17
+4227 934
+4301 934
+4301 946
+4295 958
+4288 964
+4276 970
+4258 970
+4239 964
+4227 952
+4221 934
+4221 921
+4227 903
+4239 891
+4258 885
+4270 885
+4288 891
+4301 903
+17 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 3
+4295 934
+4295 952
+4288 964
+3 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 8
+4258 970
+4246 964
+4233 952
+4227 934
+4227 921
+4233 903
+4246 891
+4258 885
+8 MLine
+End
+
+Begin %I MLine
+%I b 65535
+1 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+5849 1468
+5849 1520
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+1 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+5714 1468
+5714 1520
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+1 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+5579 1468
+5579 1520
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+1 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+5444 1468
+5444 1520
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+1 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+5308 1468
+5308 1520
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+1 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+5173 1468
+5173 1520
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+1 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+5037 1468
+5037 1520
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+1 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+4902 1468
+4902 1520
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+1 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+4766 1468
+4766 1520
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+1 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+4631 1468
+4631 1520
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+1 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+4495 1468
+4495 1520
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+1 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+4360 1468
+4360 1520
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+1 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+4224 1468
+4224 1520
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+1 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+4089 1468
+4089 1520
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+1 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+3953 1468
+3953 1520
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+1 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+3818 1468
+3818 1520
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+1 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+3682 1468
+3682 1520
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+1 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+3547 1468
+3547 1520
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+1 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+3411 1468
+3411 1520
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+1 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+3276 1468
+3276 1520
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+1 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+3140 1468
+3140 1520
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+1 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+3005 1468
+3005 1520
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+1 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+2869 1468
+2869 1520
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+1 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+2734 1468
+2734 1520
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+1 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+2598 1468
+2598 1520
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+1 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+2463 1468
+2463 1520
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+1 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+2327 1468
+2327 1520
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+1 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+2192 1468
+2192 1520
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+1 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+2056 1468
+2056 1520
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+1 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+1921 1468
+1921 1520
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+1 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+1786 1468
+1786 1520
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+1 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+1651 1468
+1651 1520
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+1 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+5849 3671
+5849 3619
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+1 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+5714 3671
+5714 3619
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+1 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+5579 3671
+5579 3619
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+1 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+5444 3671
+5444 3619
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+1 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+5308 3671
+5308 3619
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+1 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+5173 3671
+5173 3619
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+1 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+5037 3671
+5037 3619
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+1 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+4902 3671
+4902 3619
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+1 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+4766 3671
+4766 3619
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+1 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+4631 3671
+4631 3619
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+1 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+4495 3671
+4495 3619
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+1 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+4360 3671
+4360 3619
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+1 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+4224 3671
+4224 3619
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+1 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+4089 3671
+4089 3619
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+1 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+3953 3671
+3953 3619
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+1 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+3818 3671
+3818 3619
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+1 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+3682 3671
+3682 3619
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+1 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+3547 3671
+3547 3619
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+1 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+3411 3671
+3411 3619
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+1 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+3276 3671
+3276 3619
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+1 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+3140 3671
+3140 3619
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+1 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+3005 3671
+3005 3619
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+1 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+2869 3671
+2869 3619
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+1 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+2734 3671
+2734 3619
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+1 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+2598 3671
+2598 3619
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+1 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+2463 3671
+2463 3619
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+1 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+2327 3671
+2327 3619
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+1 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+2192 3671
+2192 3619
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+1 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+2056 3671
+2056 3619
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+1 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+1921 3671
+1921 3619
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+1 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+1786 3671
+1786 3619
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+1 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+1651 3671
+1651 3619
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+1548 1468
+1548 3671
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+1 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+1548 1468
+1496 1468
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+1 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+1548 1689
+1496 1689
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+1 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+1548 1909
+1496 1909
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+1 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+1548 2129
+1496 2129
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+1 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+1548 2349
+1496 2349
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+1 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+1548 2570
+1496 2570
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+1 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+1548 2790
+1496 2790
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+1 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+1548 3010
+1496 3010
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+1 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+1548 3230
+1496 3230
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+1 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+1548 3451
+1496 3451
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+1 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+1548 3671
+1496 3671
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+1548 1909
+1445 1909
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+1548 3010
+1445 3010
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 20
+938 1958
+944 1952
+938 1946
+932 1952
+932 1958
+938 1970
+944 1976
+963 1982
+987 1982
+1005 1976
+1012 1970
+1018 1958
+1018 1946
+1012 1933
+993 1921
+963 1909
+950 1903
+938 1890
+932 1872
+932 1854
+20 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 8
+987 1982
+999 1976
+1005 1970
+1012 1958
+1012 1946
+1005 1933
+987 1921
+963 1909
+8 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 7
+932 1866
+938 1872
+950 1872
+981 1860
+999 1860
+1012 1866
+1018 1872
+7 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 6
+950 1872
+981 1854
+1005 1854
+1012 1860
+1018 1872
+1018 1884
+6 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+1091 1982
+1079 1921
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 19
+1079 1921
+1091 1933
+1109 1939
+1128 1939
+1146 1933
+1158 1921
+1165 1903
+1165 1890
+1158 1872
+1146 1860
+1128 1854
+1109 1854
+1091 1860
+1085 1866
+1079 1878
+1079 1884
+1085 1890
+1091 1884
+1085 1878
+19 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 8
+1128 1939
+1140 1933
+1152 1921
+1158 1903
+1158 1890
+1152 1872
+1140 1860
+1128 1854
+8 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+1091 1982
+1152 1982
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 3
+1091 1976
+1122 1976
+1152 1982
+3 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 17
+1262 1982
+1244 1976
+1232 1958
+1226 1927
+1226 1909
+1232 1878
+1244 1860
+1262 1854
+1275 1854
+1293 1860
+1305 1878
+1311 1909
+1311 1927
+1305 1958
+1293 1976
+1275 1982
+1262 1982
+17 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 10
+1262 1982
+1250 1976
+1244 1970
+1238 1958
+1232 1927
+1232 1909
+1238 1878
+1244 1866
+1250 1860
+1262 1854
+10 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 10
+1275 1854
+1287 1860
+1293 1866
+1299 1878
+1305 1909
+1305 1927
+1299 1958
+1293 1970
+1287 1976
+1275 1982
+10 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 15
+938 3059
+944 3053
+938 3047
+932 3053
+932 3059
+938 3071
+944 3077
+963 3083
+987 3083
+1005 3077
+1012 3065
+1012 3047
+1005 3035
+987 3028
+969 3028
+15 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 6
+987 3083
+999 3077
+1005 3065
+1005 3047
+999 3035
+987 3028
+6 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 16
+987 3028
+999 3022
+1012 3010
+1018 2998
+1018 2979
+1012 2967
+1005 2961
+987 2955
+963 2955
+944 2961
+938 2967
+932 2979
+932 2986
+938 2992
+944 2986
+938 2979
+16 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 6
+1005 3016
+1012 2998
+1012 2979
+1005 2967
+999 2961
+987 2955
+6 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 17
+1116 3083
+1097 3077
+1085 3059
+1079 3028
+1079 3010
+1085 2979
+1097 2961
+1116 2955
+1128 2955
+1146 2961
+1158 2979
+1165 3010
+1165 3028
+1158 3059
+1146 3077
+1128 3083
+1116 3083
+17 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 10
+1116 3083
+1103 3077
+1097 3071
+1091 3059
+1085 3028
+1085 3010
+1091 2979
+1097 2967
+1103 2961
+1116 2955
+10 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 10
+1128 2955
+1140 2961
+1146 2967
+1152 2979
+1158 3010
+1158 3028
+1152 3059
+1146 3071
+1140 3077
+1128 3083
+10 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 17
+1262 3083
+1244 3077
+1232 3059
+1226 3028
+1226 3010
+1232 2979
+1244 2961
+1262 2955
+1275 2955
+1293 2961
+1305 2979
+1311 3010
+1311 3028
+1305 3059
+1293 3077
+1275 3083
+1262 3083
+17 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 10
+1262 3083
+1250 3077
+1244 3071
+1238 3059
+1232 3028
+1232 3010
+1238 2979
+1244 2967
+1250 2961
+1262 2955
+10 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 10
+1275 2955
+1287 2961
+1293 2967
+1299 2979
+1305 3010
+1305 3028
+1299 3059
+1293 3071
+1287 3077
+1275 3083
+10 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+5952 1468
+5952 3671
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+1 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+5952 1468
+6004 1468
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+1 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+5952 1689
+6004 1689
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+1 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+5952 1909
+6004 1909
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+1 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+5952 2129
+6004 2129
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+1 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+5952 2349
+6004 2349
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+1 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+5952 2570
+6004 2570
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+1 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+5952 2790
+6004 2790
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+1 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+5952 3010
+6004 3010
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+1 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+5952 3230
+6004 3230
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+1 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+5952 3451
+6004 3451
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+1 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+5952 3671
+6004 3671
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+5952 1909
+6055 1909
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+5952 3010
+6055 3010
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 19
+670 1799
+689 1805
+652 1805
+670 1799
+658 1786
+652 1768
+652 1756
+658 1738
+670 1725
+682 1719
+701 1713
+731 1713
+750 1719
+762 1725
+774 1738
+780 1756
+780 1768
+774 1786
+762 1799
+19 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 10
+652 1756
+658 1744
+670 1731
+682 1725
+701 1719
+731 1719
+750 1725
+762 1731
+774 1744
+780 1756
+10 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+731 1799
+780 1799
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+731 1805
+780 1805
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+731 1780
+731 1823
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+695 1884
+780 1884
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+695 1890
+780 1890
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 10
+731 1890
+713 1897
+701 1909
+695 1921
+695 1939
+701 1946
+707 1946
+713 1939
+707 1933
+701 1939
+10 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+695 1866
+695 1890
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+780 1866
+780 1909
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 17
+695 2050
+701 2031
+713 2019
+731 2013
+744 2013
+762 2019
+774 2031
+780 2050
+780 2062
+774 2080
+762 2092
+744 2098
+731 2098
+713 2092
+701 2080
+695 2062
+695 2050
+17 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 8
+695 2050
+701 2037
+713 2025
+731 2019
+744 2019
+762 2025
+774 2037
+780 2050
+8 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 8
+780 2062
+774 2074
+762 2086
+744 2092
+731 2092
+713 2086
+701 2074
+695 2062
+8 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 7
+695 2166
+762 2166
+774 2172
+780 2190
+780 2202
+774 2221
+762 2233
+7 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 4
+695 2172
+762 2172
+774 2178
+780 2190
+4 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+695 2233
+780 2233
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+695 2239
+780 2239
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+695 2147
+695 2172
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+695 2215
+695 2239
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+780 2233
+780 2258
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+695 2313
+780 2313
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+695 2319
+780 2319
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 7
+713 2319
+701 2331
+695 2349
+695 2362
+701 2380
+713 2386
+780 2386
+7 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 4
+695 2362
+701 2374
+713 2380
+780 2380
+4 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+695 2294
+695 2319
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+780 2294
+780 2337
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+780 2362
+780 2404
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+652 2527
+780 2527
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+652 2533
+780 2533
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 14
+713 2527
+701 2514
+695 2502
+695 2490
+701 2472
+713 2459
+731 2453
+744 2453
+762 2459
+774 2472
+780 2490
+780 2502
+774 2514
+762 2527
+14 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 8
+695 2490
+701 2478
+713 2466
+731 2459
+744 2459
+762 2466
+774 2478
+780 2490
+8 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+652 2508
+652 2533
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+780 2527
+780 2551
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+652 2790
+780 2790
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+652 2796
+780 2796
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 6
+652 2753
+689 2747
+652 2747
+652 2839
+689 2839
+652 2833
+6 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+780 2771
+780 2814
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 17
+731 2900
+731 2973
+719 2973
+707 2967
+701 2961
+695 2949
+695 2931
+701 2912
+713 2900
+731 2894
+744 2894
+762 2900
+774 2912
+780 2931
+780 2943
+774 2961
+762 2973
+17 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 3
+731 2967
+713 2967
+701 2961
+3 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 8
+695 2931
+701 2918
+713 2906
+731 2900
+744 2900
+762 2906
+774 2918
+780 2931
+8 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+695 3016
+780 3016
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+695 3022
+780 3022
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 7
+713 3022
+701 3035
+695 3053
+695 3065
+701 3083
+713 3090
+780 3090
+7 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 4
+695 3065
+701 3077
+713 3083
+780 3083
+4 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 7
+713 3090
+701 3102
+695 3120
+695 3132
+701 3151
+713 3157
+780 3157
+7 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 4
+695 3132
+701 3145
+713 3151
+780 3151
+4 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+695 2998
+695 3022
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+780 2998
+780 3041
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+780 3065
+780 3108
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+780 3132
+780 3175
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+695 3194
+823 3194
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+695 3200
+823 3200
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 14
+713 3200
+701 3212
+695 3224
+695 3236
+701 3255
+713 3267
+731 3273
+744 3273
+762 3267
+774 3255
+780 3236
+780 3224
+774 3212
+762 3200
+14 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 8
+695 3236
+701 3249
+713 3261
+731 3267
+744 3267
+762 3261
+774 3249
+780 3236
+8 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+695 3175
+695 3200
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+823 3175
+823 3218
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+3 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 5
+768 3377
+774 3371
+780 3377
+774 3383
+768 3377
+5 MLine
+End
+
+Begin %I MLine
+%I b 65535
+1 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 32
+5849 1626
+5714 1807
+5579 1873
+5444 1910
+5308 1958
+5173 2030
+5037 2116
+4902 2208
+4766 2304
+4631 2400
+4495 2484
+4360 2554
+4224 2610
+4089 2655
+3953 2687
+3818 2709
+3682 2710
+3547 2689
+3411 2654
+3276 2611
+3140 2560
+3005 2491
+2869 2407
+2734 2313
+2598 2216
+2463 2116
+2327 2021
+2192 1937
+2056 1871
+1921 1833
+1786 1781
+1651 1630
+32 MLine
+End
+
+Begin %I MLine
+%I b 65535
+5 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 3
+5849 2045
+5714 2180
+5643 2199
+3 MLine
+End
+
+Begin %I MLine
+%I b 65535
+5 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 1
+5579 2217
+1 MLine
+End
+
+Begin %I MLine
+%I b 65535
+5 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 4
+5558 2222
+5444 2249
+5308 2301
+5307 2302
+4 MLine
+End
+
+Begin %I MLine
+%I b 65535
+5 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 4
+5230 2345
+5173 2377
+5037 2470
+5009 2490
+4 MLine
+End
+
+Begin %I MLine
+%I b 65535
+5 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 4
+4938 2541
+4902 2567
+4766 2655
+4715 2684
+4 MLine
+End
+
+Begin %I MLine
+%I b 65535
+5 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 4
+4639 2728
+4631 2732
+4495 2805
+4404 2848
+4 MLine
+End
+
+Begin %I MLine
+%I b 65535
+5 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 1
+4360 2869
+1 MLine
+End
+
+Begin %I MLine
+%I b 65535
+5 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 4
+4324 2884
+4224 2928
+4089 2972
+4076 2975
+4 MLine
+End
+
+Begin %I MLine
+%I b 65535
+5 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 4
+3989 2992
+3953 2999
+3818 3012
+3726 3012
+4 MLine
+End
+
+Begin %I MLine
+%I b 65535
+5 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 1
+3682 3012
+1 MLine
+End
+
+Begin %I MLine
+%I b 65535
+5 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 4
+3638 3008
+3547 2999
+3411 2962
+3382 2951
+4 MLine
+End
+
+Begin %I MLine
+%I b 65535
+5 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 4
+3300 2918
+3276 2909
+3140 2855
+3055 2819
+4 MLine
+End
+
+Begin %I MLine
+%I b 65535
+5 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 1
+3005 2797
+1 MLine
+End
+
+Begin %I MLine
+%I b 65535
+5 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 3
+2975 2783
+2869 2731
+2743 2656
+3 MLine
+End
+
+Begin %I MLine
+%I b 65535
+5 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 1
+2734 2650
+1 MLine
+End
+
+Begin %I MLine
+%I b 65535
+5 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 4
+2670 2606
+2598 2557
+2463 2465
+2451 2458
+4 MLine
+End
+
+Begin %I MLine
+%I b 65535
+5 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 4
+2374 2415
+2327 2388
+2192 2331
+2133 2309
+4 MLine
+End
+
+Begin %I MLine
+%I b 65535
+5 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 1
+2056 2281
+1 MLine
+End
+
+Begin %I MLine
+%I b 65535
+5 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 3
+2050 2279
+1921 2241
+1796 2207
+3 MLine
+End
+
+Begin %I MLine
+%I b 65535
+5 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 1
+1786 2204
+1 MLine
+End
+
+Begin %I MLine
+%I b 65535
+5 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+1732 2148
+1651 2061
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+5 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 3
+5849 2508
+5714 2550
+5661 2570
+3 MLine
+End
+
+Begin %I MLine
+%I b 65535
+5 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 3
+5599 2594
+5579 2601
+5578 2602
+3 MLine
+End
+
+Begin %I MLine
+%I b 65535
+5 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 3
+5521 2634
+5444 2678
+5349 2734
+3 MLine
+End
+
+Begin %I MLine
+%I b 65535
+5 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 1
+5308 2758
+1 MLine
+End
+
+Begin %I MLine
+%I b 65535
+5 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+5292 2766
+5272 2776
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+5 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 4
+5213 2806
+5173 2826
+5037 2894
+5036 2895
+4 MLine
+End
+
+Begin %I MLine
+%I b 65535
+5 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+4978 2926
+4958 2936
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+5 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 1
+4902 2967
+1 MLine
+End
+
+Begin %I MLine
+%I b 65535
+5 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 3
+4900 2968
+4766 3036
+4722 3053
+3 MLine
+End
+
+Begin %I MLine
+%I b 65535
+5 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+4660 3078
+4640 3086
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+5 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 1
+4631 3089
+1 MLine
+End
+
+Begin %I MLine
+%I b 65535
+5 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 3
+4577 3108
+4495 3137
+4390 3173
+3 MLine
+End
+
+Begin %I MLine
+%I b 65535
+5 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 1
+4360 3184
+1 MLine
+End
+
+Begin %I MLine
+%I b 65535
+5 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+4328 3194
+4307 3201
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+5 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 4
+4243 3220
+4224 3226
+4089 3258
+4051 3266
+4 MLine
+End
+
+Begin %I MLine
+%I b 65535
+5 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+3986 3280
+3965 3284
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+5 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 1
+3953 3287
+1 MLine
+End
+
+Begin %I MLine
+%I b 65535
+5 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 3
+3899 3296
+3818 3309
+3702 3311
+3 MLine
+End
+
+Begin %I MLine
+%I b 65535
+5 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 1
+3682 3312
+1 MLine
+End
+
+Begin %I MLine
+%I b 65535
+5 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+3637 3305
+3615 3302
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+5 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 4
+3550 3292
+3547 3291
+3411 3258
+3356 3248
+4 MLine
+End
+
+Begin %I MLine
+%I b 65535
+5 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 3
+3292 3235
+3276 3232
+3270 3231
+3 MLine
+End
+
+Begin %I MLine
+%I b 65535
+5 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 3
+3206 3214
+3140 3197
+3015 3160
+3 MLine
+End
+
+Begin %I MLine
+%I b 65535
+5 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 1
+3005 3157
+1 MLine
+End
+
+Begin %I MLine
+%I b 65535
+5 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+2953 3139
+2932 3132
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+5 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 4
+2870 3110
+2869 3110
+2734 3050
+2689 3027
+4 MLine
+End
+
+Begin %I MLine
+%I b 65535
+5 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+2631 2998
+2611 2988
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+5 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 1
+2598 2981
+1 MLine
+End
+
+Begin %I MLine
+%I b 65535
+5 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 3
+2554 2954
+2463 2900
+2386 2850
+3 MLine
+End
+
+Begin %I MLine
+%I b 65535
+5 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 3
+2330 2813
+2327 2811
+2312 2802
+3 MLine
+End
+
+Begin %I MLine
+%I b 65535
+5 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 3
+2255 2767
+2192 2728
+2083 2670
+3 MLine
+End
+
+Begin %I MLine
+%I b 65535
+5 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 1
+2056 2655
+1 MLine
+End
+
+Begin %I MLine
+%I b 65535
+5 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+2023 2641
+2003 2633
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+5 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 4
+1942 2607
+1921 2598
+1786 2557
+1753 2547
+4 MLine
+End
+
+Begin %I MLine
+%I b 65535
+5 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+1690 2528
+1669 2522
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+5 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+5849 2666
+5807 2681
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+5 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+5766 2695
+5724 2710
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+5 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 1
+5714 2713
+1 MLine
+End
+
+Begin %I MLine
+%I b 65535
+5 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+5684 2728
+5644 2747
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+5 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 3
+5605 2767
+5579 2779
+5566 2787
+3 MLine
+End
+
+Begin %I MLine
+%I b 65535
+5 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+5528 2809
+5490 2831
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+5 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 3
+5452 2854
+5444 2858
+5414 2877
+3 MLine
+End
+
+Begin %I MLine
+%I b 65535
+5 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+5377 2901
+5340 2925
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+5 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 1
+5308 2945
+1 MLine
+End
+
+Begin %I MLine
+%I b 65535
+5 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+5303 2948
+5265 2971
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+5 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+5228 2994
+5190 3017
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+5 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 1
+5173 3028
+1 MLine
+End
+
+Begin %I MLine
+%I b 65535
+5 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+5152 3039
+5113 3059
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+5 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 3
+5074 3080
+5037 3099
+5035 3100
+3 MLine
+End
+
+Begin %I MLine
+%I b 65535
+5 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+4994 3117
+4954 3134
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+5 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 3
+4913 3152
+4902 3156
+4872 3166
+3 MLine
+End
+
+Begin %I MLine
+%I b 65535
+5 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+4830 3180
+4788 3194
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+5 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 1
+4766 3201
+1 MLine
+End
+
+Begin %I MLine
+%I b 65535
+5 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+4746 3206
+4703 3216
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+5 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 3
+4660 3226
+4631 3233
+4617 3236
+3 MLine
+End
+
+Begin %I MLine
+%I b 65535
+5 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+4574 3244
+4531 3253
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+5 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 1
+4495 3260
+1 MLine
+End
+
+Begin %I MLine
+%I b 65535
+5 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+4487 3262
+4445 3272
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+5 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 3
+4402 3282
+4360 3292
+4359 3292
+3 MLine
+End
+
+Begin %I MLine
+%I b 65535
+5 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+4316 3302
+4273 3311
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+5 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 3
+4230 3321
+4224 3322
+4187 3330
+3 MLine
+End
+
+Begin %I MLine
+%I b 65535
+5 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+4144 3339
+4100 3348
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+5 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 1
+4089 3350
+1 MLine
+End
+
+Begin %I MLine
+%I b 65535
+5 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+4057 3357
+4014 3366
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+5 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 3
+3971 3375
+3953 3378
+3928 3382
+3 MLine
+End
+
+Begin %I MLine
+%I b 65535
+5 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+3884 3388
+3840 3395
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+5 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 1
+3818 3398
+1 MLine
+End
+
+Begin %I MLine
+%I b 65535
+5 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+3797 3398
+3753 3398
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+5 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 3
+3709 3398
+3682 3398
+3665 3396
+3 MLine
+End
+
+Begin %I MLine
+%I b 65535
+5 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+3621 3390
+3577 3385
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+5 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 1
+3547 3382
+1 MLine
+End
+
+Begin %I MLine
+%I b 65535
+5 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+3534 3379
+3490 3370
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+5 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 3
+3447 3361
+3411 3353
+3404 3351
+3 MLine
+End
+
+Begin %I MLine
+%I b 65535
+5 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+3362 3341
+3319 3331
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+5 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 3
+3276 3320
+3276 3320
+3233 3311
+3 MLine
+End
+
+Begin %I MLine
+%I b 65535
+5 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+3190 3301
+3147 3292
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+5 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 1
+3140 3290
+1 MLine
+End
+
+Begin %I MLine
+%I b 65535
+5 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+3104 3282
+3061 3272
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+5 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 3
+3018 3262
+3005 3258
+2975 3252
+3 MLine
+End
+
+Begin %I MLine
+%I b 65535
+5 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+2932 3243
+2889 3233
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+5 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 1
+2869 3229
+1 MLine
+End
+
+Begin %I MLine
+%I b 65535
+5 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+2846 3223
+2804 3211
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+5 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 3
+2762 3199
+2734 3191
+2720 3185
+3 MLine
+End
+
+Begin %I MLine
+%I b 65535
+5 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+2679 3168
+2639 3151
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+5 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 1
+2598 3134
+1 MLine
+End
+
+Begin %I MLine
+%I b 65535
+5 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+2598 3134
+2558 3116
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+5 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+2518 3097
+2478 3079
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+5 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 1
+2463 3072
+1 MLine
+End
+
+Begin %I MLine
+%I b 65535
+5 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+2438 3060
+2398 3042
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+5 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 3
+2358 3024
+2327 3010
+2318 3005
+3 MLine
+End
+
+Begin %I MLine
+%I b 65535
+5 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+2278 2986
+2239 2966
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+5 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 3
+2200 2946
+2192 2942
+2161 2924
+3 MLine
+End
+
+Begin %I MLine
+%I b 65535
+5 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+2123 2903
+2085 2881
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+5 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 1
+2056 2865
+1 MLine
+End
+
+Begin %I MLine
+%I b 65535
+5 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+2046 2859
+2008 2837
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+5 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+1970 2816
+1931 2794
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+5 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 1
+1921 2788
+1 MLine
+End
+
+Begin %I MLine
+%I b 65535
+5 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+1892 2775
+1851 2757
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+5 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 3
+1811 2739
+1786 2728
+1770 2723
+3 MLine
+End
+
+Begin %I MLine
+%I b 65535
+5 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 2
+1728 2711
+1686 2699
+2 MLine
+End
+
+Begin %I MLine
+%I b 65535
+5 0 0 [] 0 SetB
+%I cfg #
+0 0 0 SetCFg
+%I cbg White
+1 1 1 SetCBg
+none SetP %I p n
+%I t
+[ 0.5 0 0 0.5 0 0 ] concat
+%I 32
+5849 2914
+5714 2942
+5579 2997
+5444 3063
+5308 3130
+5173 3194
+5037 3253
+4902 3295
+4766 3312
+4631 3323
+4495 3347
+4360 3385
+4224 3412
+4089 3436
+3953 3451
+3818 3464
+3682 3461
+3547 3443
+3411 3418
+3276 3402
+3140 3385
+3005 3361
+2869 3327
+2734 3287
+2598 3242
+2463 3194
+2327 3150
+2192 3114
+2056 3076
+1921 3034
+1786 3018
+1651 3026
+32 MLine
+End
+
+End %I eop
+
+showpage
+
+%%Trailer
+
+end

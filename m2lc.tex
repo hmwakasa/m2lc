@@ -141,7 +141,7 @@
 
 \institute{北海道大学大学院理学院 地球流体力学研究室 M2}
 \author{人見祥磨}
-\title{水惑星における南北熱輸送の太陽定数への依存性}
+\title{水惑星における南北熱輸送の太陽定数依存性}
 
 \begin{document}
 
@@ -150,81 +150,58 @@
 \begin{frame}
 	\frametitle{背景}
 	\begin{itemize}
-		\item 系外惑星に生命が存在するためには、惑星表面に液体の水があることが
-			重要だと考えられる (Kopparapu \etal*, 2013)
-		\item 惑星表面に液体の水が存在しうる領域は、ハビタブルゾーン (HZ)と呼ばれる
-		\item HZ より内側では、水が蒸発しきってしまうほど太陽定数が大きいと考えられる
-		\item ここでは太陽定数を増やした時に気候がどう変化するか着目する
-	\end{itemize}
-	\begin{figure}
-		\centering\scriptsize
-		\includegraphics[width=.5\textwidth]{kopparapu8.png}\\
-		様々な中心星の有効温度ごとに、雲がない場合の HZ を示したもの。
-		(Kopparapu \etal*, 2013; Fig.\ 8)
-	\end{figure}
-\end{frame}
-
-\begin{frame}
-	\frametitle{暴走温室状態}
-	\begin{itemize}
-		\item HZ の内側境界を決定する重要な概念として、暴走温室状態がある
+		\item 灰色 1 次元モデルでは OLR に上限が存在する（放射上限）(Nakajima \etal 1992)
+		\item 灰色 3 次元モデルでも放射上限は現れる (Ishiwatari \etal 2002)
 			\begin{itemize}
-				\item 灰色 1 次元モデルでは惑星大気が射出できる放射に
-					上限が存在する（放射上限）
-				\item 放射上限を超えて恒星放射の入射がある状態が暴走温室状態
-					である (Nakajima \etal 1992)
-				\item 灰色 3 次元モデルでも放射上限は現れる (IshiwatAri \etal 2002)
+				\item 灰色 3 次元モデルでは、太陽定数を大きくすると OLR や地表面温度の南北差が小さくなる
+				\item 灰色 3 次元モデルでは太陽定数が大きくなると潜熱輸送が大きくなっていた
 			\end{itemize}
-		\item 非灰色の 3 次元モデルでは暴走温室に関する議論は学会発表程度しかなかった
 	\end{itemize}
 	\begin{columns}[b,onlytextwidth]
 		\begin{column}{.45\textwidth}
-				\centering\scriptsize
-				\includegraphics[width=.8\textwidth]{nf4.png}\\
-				灰色 1 次元放射対流平衡モデルでの\\
-				地表面温度と OLR の関係\\
-				(Nakajima \etal*, 1992; Fig.\ 4)
+				\includegraphics[width=\textwidth]{i20024a.pdf}
 		\end{column}
 		\begin{column}{.45\textwidth}
 			\begin{figure}
-				\centering\scriptsize
-				\includegraphics[width=.8\textwidth]{i20024a.pdf}\\
-				灰色 3 次元モデルでの\\
-				太陽定数と OLR の関係\\
-				(\(S=1570, 1550, 1500, 1380, 1200\hmu{W/m^2}\))\\
-				(Ishiwatari \etal*, 2002; Fig.\ 4a)
+				\includegraphics[width=\textwidth]{i20024b.pdf}
 			\end{figure}
 		\end{column}
 	\end{columns}
+	\begin{center}
+		灰色 3 次元モデルでの太陽定数と OLR の関係
+		(\(S=1570, 1550, 1500, 1380, 1200\hmu{W/m^2}\))\\
+		(Ishiwatari \etal*, 2002; Fig.\ 4a, b)
+	\end{center}
 \end{frame}
 
 
 \begin{frame}
 	\frametitle{研究目的}
 	\begin{itemize}
+		\item 非灰色の 3 次元モデルに関してはしっかりとした議論が行われていなかった
 		\item 非灰色の 3 次元モデルで太陽定数を変えて計算する
-		\item 南北熱輸送に関して考察する
+			\begin{itemize}
+				\item 灰色の場合: 太陽定数が大きい時に南北差が小さいのが特徴
+				\item 南北差が小さくなるのには熱輸送が効いているはず
+				\item 太陽定数を大きくした場合の南北熱輸送に関して考察する
+				\item 非灰色でも灰色モデルと同様に太陽定数が増大するにつれて
+					潜熱輸送も増大するのか
+			\end{itemize}
 	\end{itemize}
 \end{frame}
 
 \begin{frame}
 	\frametitle{モデル}
-	\begin{columns}[T,onlytextwidth]
-		\begin{column}{.45\textwidth}
+	\begin{itemize}
+		\item 利用したモデル
 			\begin{itemize}
-				\item 利用したモデル
-					\begin{itemize}
-						\item DCPAM5
-					\end{itemize}
-				\item 基礎方程式
-					\begin{itemize}
-						\item 以下の 3 次元球殻上プリミティヴ方程式
-					\end{itemize}
+				\item DCPAM5
 			\end{itemize}
-		\end{column}
-		\begin{column}{.45\textwidth}
-		\end{column}
-	\end{columns}
+		\item 基礎方程式
+			\begin{itemize}
+				\item 以下の 3 次元球殻上プリミティヴ方程式
+			\end{itemize}
+	\end{itemize}
 	\tiny
 	\begin{gather*}
 		\pdv{\pi}{t}+\hmvec{v}_H\cdot\nabla_\sigma\pi=-D-\pdv{\dot \sigma}{\sigma}\tag{連続の式}\\
@@ -252,17 +229,27 @@
 		\item 水惑星
 		\item 解像度 T42L26
 		\item 太陽定数 \(S\) と積分時間
-			\begin{center}
-				\begin{tblr}{colspec={lrrrrr},hlines}
+			\begin{table}
+				\begin{tabular}{lrrrrr}
+					\hline
 					\(S\hmu{[W/m^2]}\)&\(1366\)&\(1500\)&\(1600\)&\(1800\)&\(2000\)\\
+					\hline
 					積分時間（年）&40&3&10&10&20\\
-				\end{tblr}
-			\end{center}
+					\hline
+				\end{tabular}
+			\end{table}
+		\item 雲あり
+		\item 地球設定
+		\item 初期状態
+			\begin{itemize}
+				\item 地表面温度 \(280\hmu{K}\)
+				\item 大気は静止状態
+			\end{itemize}
 	\end{itemize}
 \end{frame}
 
 \begin{frame}
-	\frametitle{結果 （OLRA の時間推移）}
+	\frametitle{結果 （OLRA, OSRA の時間推移）}
 	\begin{columns}[T]
 		\begin{column}{.3\textwidth}
 			\centering
@@ -285,54 +272,20 @@
 		\end{column}
 	\end{columns}
 \end{frame}
-%\begin{frame}
-%	\frametitle{結果 （OLRA の時間推移）}
-%	\begin{columns}[T]
-%		\begin{column}{.3\textwidth}
-%			\centering
-%			\includegraphics[width=\textwidth]{S1366/S1300_OLRA_horimean_time0.0-14600.0-crop.png}
-%			\(S=1366\hmu{W/m^2}\)\\
-%			\includegraphics[width=\textwidth]{S1500/S1500_OLRA_horimean_time0.0-1095.0-crop.png}
-%			\(S=1500\hmu{W/m^2}\)
-%		\end{column}
-%		\begin{column}{.3\textwidth}
-%			\centering
-%			\includegraphics[width=\textwidth]{S1600/S1600_OLRA_horimean_time0.0-3650.0-crop.png}
-%			\(S=1600\hmu{W/m^2}\)\\
-%			\includegraphics[width=\textwidth]{S1800/S1800_OLRA_horimean_time0.0-3650.0-crop.png}
-%			\(S=1800\hmu{W/m^2}\)
-%		\end{column}
-%		\begin{column}{.3\textwidth}
-%			\centering
-%			\includegraphics[width=\textwidth]{S2000/S2000_OLRA_horimean_time0.0-7300.0-crop.png}
-%			\(S=2000\hmu{W/m^2}\)
-%		\end{column}
-%	\end{columns}
-%\end{frame}
 
 \begin{frame}
-	\frametitle{結果 （地表面温度; 計算終了年での平均）}
+	\frametitle{結果 （地表面温度と OLR; 計算終了年での平均）}
 	\begin{columns}[T]
-		\begin{column}{.3\textwidth}
+		\begin{column}{.45\textwidth}
 			\centering
-			\includegraphics[height=\textwidth,angle=-90]{S1366/SurfTemp,time=14235:14600-crop.pdf}
-			\(S=1366\hmu{W/m^2}\)\\
-			\includegraphics[height=\textwidth,angle=-90]{S1500/SurfTemp,time=730:1095-crop.pdf}
-			\(S=1500\hmu{W/m^2}\)
+			\includegraphics[height=\textwidth,angle=-90]{SurfTemp-overplot-crop.pdf}
 		\end{column}
-		\begin{column}{.3\textwidth}
+		\begin{column}{.45\textwidth}
 			\centering
-			\includegraphics[height=\textwidth,angle=-90]{S1600/SurfTemp,time=3285:3650-crop.pdf}
-			\(S=1600\hmu{W/m^2}\)\\
-			\includegraphics[height=\textwidth,angle=-90]{S1800/SurfTemp,time=3285:3650-crop.pdf}
-			\(S=1800\hmu{W/m^2}\)
-		\end{column}
-		\begin{column}{.3\textwidth}
-			\centering
-			\includegraphics[height=\textwidth,angle=-90]{S2000/SurfTemp,time=6935:7300-crop.pdf}
-			\(S=2000\hmu{W/m^2}\)
+			\includegraphics[height=\textwidth,angle=-90]{OLR-overplot-crop.pdf}
 		\end{column}
 	\end{columns}
+	実線: S1366; 破線: S1500; 点線: S1600; 一点鎖線: S1800; 二点鎖線: S2000;
 \end{frame}
 
 \begin{frame}
@@ -367,32 +320,6 @@
 		\mathrm{dryStatEnFlxLat}=\int (C_pT+gh)v\,dp\tag{乾燥静的エネルギー}\\
 		\mathrm{moistStatEnFlxLat}=(\mathrm{dryStatEnFlxLat}+\mathrm{latentEn})\tag{湿潤静的エネルギー}
 	\end{gather*}
-\end{frame}
-
-\begin{frame}
-	\frametitle{結果 （南北熱輸送; 計算終了年での平均）}
-	\begin{columns}[T]
-		\begin{column}{.3\textwidth}
-			\centering
-			\includegraphics[height=\textwidth,angle=-90]{S1366/EngyFlx,time=14235:14600-crop.pdf}
-			\(S=1366\hmu{W/m^2}\)\\
-			\includegraphics[height=\textwidth,angle=-90]{S1500/EngyFlx,time=730:1095-crop.pdf}
-			\(S=1500\hmu{W/m^2}\)
-		\end{column}
-		\begin{column}{.3\textwidth}
-			\centering
-			\includegraphics[height=\textwidth,angle=-90]{S1600/EngyFlx,time=3285:3650-crop.pdf}
-			\(S=1600\hmu{W/m^2}\)\\
-			\includegraphics[height=\textwidth,angle=-90]{S1800/EngyFlx,time=3285:3650-crop.pdf}
-			\(S=1800\hmu{W/m^2}\)
-		\end{column}
-		\begin{column}{.3\textwidth}
-			\centering
-			\includegraphics[height=\textwidth,angle=-90]{S2000/EngyFlx,time=6935:7300-crop.pdf}
-			\(S=2000\hmu{W/m^2}\)
-		\end{column}
-	\end{columns}
-	実線: dryStatEnFlxLat; 破線: latentEnFlxLat; 鎖線: moistStatFlxLat;
 \end{frame}
 
 \begin{frame}
@@ -496,11 +423,40 @@
 \end{frame}
 
 \begin{frame}
-	\frametitle{考察}
+	\frametitle{結果 （南北熱輸送; 計算終了年での平均）}
+	\begin{columns}[T]
+		\begin{column}{.3\textwidth}
+			\centering
+			\includegraphics[height=\textwidth,angle=-90]{S1366/EngyFlx,time=14235:14600-crop.pdf}
+			\(S=1366\hmu{W/m^2}\)\\
+			\includegraphics[height=\textwidth,angle=-90]{S1500/EngyFlx,time=730:1095-crop.pdf}
+			\(S=1500\hmu{W/m^2}\)
+		\end{column}
+		\begin{column}{.3\textwidth}
+			\centering
+			\includegraphics[height=\textwidth,angle=-90]{S1600/EngyFlx,time=3285:3650-crop.pdf}
+			\(S=1600\hmu{W/m^2}\)\\
+			\includegraphics[height=\textwidth,angle=-90]{S1800/EngyFlx,time=3285:3650-crop.pdf}
+			\(S=1800\hmu{W/m^2}\)
+		\end{column}
+		\begin{column}{.3\textwidth}
+			\centering
+			\includegraphics[height=\textwidth,angle=-90]{S2000/EngyFlx,time=6935:7300-crop.pdf}
+			\(S=2000\hmu{W/m^2}\)
+		\end{column}
+	\end{columns}
+	実線: dryStatEnFlxLat; 破線: latentEnFlxLat; 鎖線: moistStatFlxLat;
+\end{frame}
+
+\begin{frame}
+	\frametitle{議論}
 	\begin{itemize}
-		\item 太陽定数が大きくなると潜熱輸送が大きくなる
-		\item 潜熱輸送を大きくしているのは何?（今後の課題）
-		\item 地表面温度の差が小さくなるのに、どうして輸送量は増えるのか?
+		\item 非灰色でも、太陽定数が増大した時に潜熱輸送も増大する事がわかった
+		\item 今後の課題
+			\begin{itemize}
+				\item 潜熱輸送を大きくしているのは何?
+				\item 地表面温度の差が小さくなるのに、どうして輸送量は増えるのか?
+			\end{itemize}
 	\end{itemize}
 \end{frame}
 
